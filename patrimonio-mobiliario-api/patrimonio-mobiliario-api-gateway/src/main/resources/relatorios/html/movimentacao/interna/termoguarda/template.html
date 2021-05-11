@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Termo de Guarda e Responsabilidade</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/movimentacao_interna_termoguarda.css"/>
+</head>
+<body>
+<div class="header" th:include="${templateHeader}"></div>
+
+<div class="titulos">
+    <h1 class="titulo">
+        <strong>Termo de Guarda e Responsabilidade</strong>
+    </h1>
+    <p th:text="${relatorio.orgao}"></p>
+</div>
+
+<h3>DADOS GERAIS</h3>
+<table class="tabela-termo-responsabilidade" cellpadding="2">
+    <tr>
+        <td><strong>N° Termo: </strong> <span th:text="${relatorio.numeroTermo}"></span></td>
+        <td><strong>Tipo: </strong> <span th:text="${relatorio.tipo}"></span></td>
+        <td style="border-right: 1px solid #ccc"><strong>Data: </strong> <span th:text="${relatorio.dataMovimentacao}"></span></td>
+    </tr>
+
+    <tr>
+        <td><strong>Responsável:</strong><span th:text="${relatorio.responsavel}"></span></td>
+        <td colspan="2" style="vertical-align: top; border-right: 1px solid #ccc"><strong th:text="${setorDestinoFormatado}"></strong> <span th:text="${relatorio.setor}"></span></td>
+    </tr>
+
+    <tr>
+        <td colspan="3"><strong>Motivo/Observações: </strong> <span th:text="${relatorio.motivoObs}"></span></td>
+    </tr>
+</table>
+
+<h3>PATRIMÔNIOS</h3>
+<div style="min-height: 438px">
+    <table class="tabela-termo-patrimonios">
+        <tr>
+            <th colspan="3">Nº Patrimônio</th>
+            <th colspan="5">Descrição</th>
+            <th colspan="2">Valor Líquido</th>
+        </tr>
+        <tr th:each="patrimonio : ${relatorio.patrimonios}">
+            <td colspan="3" th:text="${patrimonio.numero}"></td>
+            <td colspan="5" th:text="${patrimonio.descricao}"></td>
+            <td colspan="2" th:text="${df.format(patrimonio.valorLiquido)}"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="footer-tabela">Patrimônios</td>
+            <td colspan="2" th:text="${relatorio.totalDeBens}"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="footer-tabela">Valor Total</td>
+            <td colspan="2" th:text="${df.format(relatorio.valorTotal)}"></td>
+        </tr>
+    </table>
+</div>
+<div class="footer-assinatura">
+    <div>
+        <p align="left">Declaro que recebi e conferi o(s) bem (ns) patrimonial (is) especificados, responsabilizando-me pela sua
+            conservação e comprometendo-me a restituí-lo(s) em perfeito estado de conservação assim que me forem
+            solicitados, ressalvada a hipótese de desgaste natural pela sua utilização.</p>
+    </div>
+
+    <table>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Nome/Matrícula</td>
+            <td align="center">Nome/Matrícula</td>
+        </tr>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Assinatura responsável pelo setor</td>
+            <td align="center">Assinatura responsável pelos bens</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

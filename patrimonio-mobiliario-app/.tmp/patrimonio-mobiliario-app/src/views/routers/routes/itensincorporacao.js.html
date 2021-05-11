@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/routers/routes/itensincorporacao.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/routers/routes</a> itensincorporacao.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import ModalIncorporacaoItem</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/ModalIncorporacaoItem'
+<span class="cstat-no" title="statement not covered" >import DadosGeraisDoItemModal</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itemincorporacao/edicao/DadosGeraisDoItemModal'
+<span class="cstat-no" title="statement not covered" >import VisualizacaoDadosGerais</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itemincorporacao/visualizacao/DadosGeraisDoItemVisualizacao'
+<span class="cstat-no" title="statement not covered" >import listagemPatrimonios</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itempatrimonio/edicao/IncorporacaoListagemPatrimonios'
+<span class="cstat-no" title="statement not covered" >import ItensCatalogoModalNovo</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itemcatalogo/novo/ItensCatalogoModalNovo'
+<span class="cstat-no" title="statement not covered" >import ItensCatalogoModalEdicao</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itemcatalogo/edicao/ItensCatalogoModalEdicao'
+<span class="cstat-no" title="statement not covered" >import ItensCatalogoVisualizacao</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itemcatalogo/visualizacao/ItensCatalogoModalVisualizacao'
+<span class="cstat-no" title="statement not covered" >import listagemPatrimoniosVisualizacao</span>
+  from '@/views/components/modal/incorporacao/adicionaritem/itempatrimonio/visualizacao/IncorporacaoListagemPatrimonios'
+&nbsp;
+export default {
+  edicao: [
+    {
+      path: '/incorporacao/',
+      name: 'ModalIncorporacaoItem',
+      component: ModalIncorporacaoItem,
+      children: [
+        {
+          path: ':incorporacaoId/itemcatalogo/novo',
+          name: 'ItensCatalogoModalNovo',
+          component: ItensCatalogoModalNovo,
+          meta: {
+            page: {
+              title: 'Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 1 - Selecione o item',
+              podeVoltar: false,
+              showModal: true,
+              visualizacao: false,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Normal'],
+          },
+        },
+        {
+          path: ':incorporacaoId/itemcatalogo/edicao/:itemIncorporacaoId',
+          name: 'ItensCatalogoModalEdicao',
+          component: ItensCatalogoModalEdicao,
+          meta: {
+            page: {
+              title: 'Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 1 - Selecione o item',
+              podeVoltar: false,
+              showModal: true,
+              visualizacao: false,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Normal'],
+          },
+        },
+        {
+          path: ':incorporacaoId/itemincorporacao/:itemIncorporacaoId',
+          name: 'DadosGeraisDoItemModal',
+          component: DadosGeraisDoItemModal,
+          meta: {
+            page: {
+              title: 'Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 2 - Dados gerais do item',
+              podeVoltar: true,
+              showModal: true,
+              visualizacao: false,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Normal'],
+          },
+        },
+        {
+          path: ':incorporacaoId/item-patrimonios/:itemIncorporacaoId',
+          name: 'IncorporacaoItemListagemPatrimonios',
+          component: listagemPatrimonios,
+          meta: {
+            page: {
+              title: 'Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 3 - Dados individuais dos patrimônios',
+              podeVoltar: true,
+              showModal: true,
+              visualizacao: false,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Normal'],
+          },
+        },
+      ],
+    }],
+  visualizacao: [
+    {
+      path: '/incorporacao/',
+      name: 'ModalIncorporacaoItemVisualizacao',
+      component: ModalIncorporacaoItem,
+      children: [
+        {
+          path: ':incorporacaoId/itemcatalogo/visualizacao/',
+          name: 'ItensCatalogoModalVisualizacao',
+          component: ItensCatalogoVisualizacao,
+          meta: {
+            page: {
+              title: 'Visualizar Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 1 - Selecione o item',
+              podeVoltar: false,
+              showModal: true,
+              visualizacao: true,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Consulta'],
+          },
+        },
+        {
+          path: ':incorporacaoId/itemcatalogo/visualizacao/:itemIncorporacaoId',
+          name: 'ItensCatalogoModalVisualizacaoCadastrado',
+          component: ItensCatalogoVisualizacao,
+          meta: {
+            page: {
+              title: 'Visualizar Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 1 - Selecione o item',
+              podeVoltar: false,
+              showModal: true,
+              visualizacao: true,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Consulta'],
+          },
+        },
+        {
+          path: ':incorporacaoId/itemincorporacao/visualizacao/:itemIncorporacaoId',
+          name: 'VisualizacaoDadosGerais',
+          component: VisualizacaoDadosGerais,
+          meta: {
+            page: {
+              title: 'Visualizar Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 2 - Visualização Dados Gerais do Item',
+              podeVoltar: true,
+              showModal: true,
+              visualizacao: true,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Consulta'],
+          },
+        },
+        {
+          path: ':incorporacaoId/item-patrimonios/visualizacao/:itemIncorporacaoId',
+          name: 'IncorporacaoItemListagemPatrimoniosVisualizacao',
+          component: listagemPatrimoniosVisualizacao,
+          meta: {
+            page: {
+              title: 'Visualizar Itens da Incorporação',
+              showAutoSave: true,
+            },
+            modal: {
+              title: 'Etapa 3 - Dados individuais dos patrimônios',
+              podeVoltar: true,
+              showModal: true,
+              visualizacao: true,
+            },
+            requiresAuth: true,
+            authorities: ['Mobiliario.Consulta'],
+          },
+        },
+      ],
+    }],
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

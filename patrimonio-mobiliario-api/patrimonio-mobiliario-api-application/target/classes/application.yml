@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: patrimonio-mobiliario
+  batch:
+    initialize-schema: never
+    table-prefix: pat_mobiliario.BATCH_
+    job:
+      enabled: false
+application:
+  version: 1.0.0-ALFA.149
+  name: patrimonio-mobiliario-api-application
+hal:
+  config:
+    migration:
+      basePath: /changelog/configuration/master.yml

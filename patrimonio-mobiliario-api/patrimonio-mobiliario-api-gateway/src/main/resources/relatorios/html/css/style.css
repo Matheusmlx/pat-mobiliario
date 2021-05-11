@@ -1,0 +1,320 @@
+body {
+    font-size: 10px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000
+}
+
+@page:first {
+    size: A4 portrait;
+    margin: 3cm 1cm 2.5cm;
+
+    @top-right {
+        content: element(header-default);
+    }
+
+    @bottom-left {
+        content: normal;
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin: 3cm 1cm 2.5cm;
+
+    @top-right {
+        content: normal;
+    }
+
+    @bottom-left {
+        content:element(footer-default);
+    }
+}
+
+.header {
+    position: running(header-default);
+    font-size: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+.header strong, .tabela-vazia {
+    font-size: 12px !important;
+}
+
+.footer {
+    position: running(footer-default);
+    margin-bottom: 1cm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px !important;
+    border-top: 1px solid #ccc;
+}
+
+.header, .header td {
+    border: 0;
+}
+
+.header, .footer, .tabela, .tabela-unica, .tabela-secundaria, .tabela-email, .tabela-vazia, .tabela-titulo, .tabela-eventos {
+    width: 100%;
+}
+
+.header-left {
+    font-size: 8px;
+    float: left !important;
+}
+.header-right{
+    font-size: 8px;
+    float: right !important;
+}
+
+#pagenumber:before {
+    content: counter(page);
+}
+
+#pagecount:before {
+    content: counter(pages);
+}
+
+.right {
+    text-align: right !important;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+hr.space {
+    background: #fff none repeat scroll 0 0;
+    color: #fff;
+    visibility: hidden
+}
+
+.new_page{
+    page-break-after: always;
+}
+
+table{
+    width: 100% !important;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+hr {
+    background: #ebebeb none repeat scroll 0 0;
+    border: medium none;
+    clear: both;
+    color: #ddd;
+    float: none;
+    height: 1px;
+    margin: 0 0 1.45em;
+    width: 100%;
+}
+
+.col-15 {
+    width: 15%;
+}
+
+.col-1 {
+    width: 10%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-35 {
+    width: 35%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-45 {
+    width: 45%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-55 {
+    width: 55%;
+}
+
+.col-65 {
+    width: 65%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+.col-9 {
+    width: 90%;
+}
+
+.col-10{
+    width: 100%;
+}
+
+.pr-2 {
+    padding-right: 20px;
+}
+
+.pr-3 {
+    padding-right: 30px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.titulos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulos p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.titulo {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sub-titulo {
+    font-size: 11px;
+    text-align: center;
+    margin: 0;
+}
+
+.imagem-cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.imagem-cabecalho img {
+    width: 300px;
+    height: auto;
+}
+
+.imagem-cabecalho strong {
+    text-transform: uppercase;
+}
+
+.secao {
+    padding: 20px;
+}
+
+.tabela {
+    margin: 0 auto 20px;
+    font-size: 9px;
+}
+
+.tabela th {
+    background-color: #ebebeb;
+    text-align: left;
+    font-size: 8px;
+    border-width: 1px 1px 0;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 8px;
+}
+
+.tabela th, .tabela td {
+    font-size: 8px !important;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.tabela td {
+    background-color: #fff;
+}
+
+.tabela td:nth-child(1) {
+    width: 60px;
+}
+
+.tabela td:nth-child(2) {
+    width: 200px;
+}
+
+.tabela td:nth-child(3) {
+    width: 60px;
+}
+
+.tabela td:nth-child(4) {
+    width: 100px;
+}
+
+.tabela td:nth-child(5) {
+    width: 100px;
+}
+
+.tabela td:nth-child(6) {
+    width: 100px;
+}
+
+.tabela td:nth-child(7) {
+    width: 100px;
+}
+
+.tabela td:nth-child(8) {
+    width: 100px;
+}
+
+.tabela-subtitulo td {
+    background-color: #fafafa;
+    font-weight: bold;
+}
+
+.lista {
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.sem-borda {
+    border: 0;
+}
+
+.sem-borda td, .sem-borda th {
+    border: 0;
+}
+
+.linha {
+    border-color: #ccc;
+    padding: 0;
+    margin: 0;
+}

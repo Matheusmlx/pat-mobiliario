@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/core/apiclient/IncorporacaoApiClient.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/core/apiclient</a> IncorporacaoApiClient.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios'
+import {AzSearchUrlBuilder} from '@azinformatica/loki'
+import UrlEncodeUtils from '../utils/UrlEncodeUtils'
+&nbsp;
+class IncorporacaoApiClient {
+&nbsp;
+    async buscarTodos(filtros, paginacao) {
+        paginacao.descending = paginacao.sortDesc[0]
+        filtros.conteudo.value = new UrlEncodeUtils(filtros.conteudo.value).encode()
+        const url = AzSearchUrlBuilder.build(
+            'api/patrimonios/incorporacao',
+            filtros,
+            paginacao
+        )
+&nbsp;
+        return axios.get(url)
+    }
+&nbsp;
+    async finalizar(incorporacaoId){
+        return axios.patch(`api/patrimonios/incorporacao/finalizar/${incorporacaoId}`)
+    }
+&nbsp;
+    async cadastrar() {
+        return axios.post('api/patrimonios/incorporacao')
+    }
+&nbsp;
+    async atualizar(incorporacao) {
+        if (incorporacao.orgao != null &amp;&amp; typeof incorporacao.orgao.id != 'undefined') {
+            incorporacao.orgao = incorporacao.orgao.id
+        }
+        if (incorporacao.setor != null &amp;&amp; typeof incorporacao.setor.id != 'undefined') {
+            incorporacao.setor = incorporacao.setor.id
+        }
+        if (incorporacao.fornecedor != null &amp;&amp; typeof incorporacao.fornecedor.id != 'undefined') {
+            incorporacao.fornecedor = incorporacao.fornecedor.id
+        }
+        if (incorporacao.reconhecimento != null &amp;&amp; typeof incorporacao.reconhecimento.id != 'undefined') {
+            incorporacao.reconhecimento = incorporacao.reconhecimento.id
+        }
+        if (incorporacao.comodante != null &amp;&amp; typeof incorporacao.comodante.id != 'undefined') {
+            incorporacao.comodante = incorporacao.comodante.id
+        }
+        return axios.put(`api/patrimonios/incorporacao/${incorporacao.id}`, incorporacao)
+    }
+&nbsp;
+    async buscarPorId(incorporacaoId) {
+        return axios.get(`api/patrimonios/incorporacao/${incorporacaoId}`)
+    }
+&nbsp;
+    async buscarRegistroPorId(incorporacaoId) {
+        return axios.get(`api/patrimonios/incorporacao/${incorporacaoId}/visualizar`)
+    }
+&nbsp;
+    async deletarIncorporacao(incorporacaoId) {
+        return axios.delete(`api/patrimonios/incorporacao/${incorporacaoId}`)
+    }
+&nbsp;
+    async reabrirIncorporacao(incorporacaoId) {
+        return axios.patch(`api/patrimonios/incorporacao/reabrir/${incorporacaoId}`)
+    }
+&nbsp;
+    async cadastrarDocumento(documento) {
+        return axios.post(`api/patrimonios/incorporacao/${documento.incorporacao}/documentos`, documento)
+    }
+&nbsp;
+    async atualizarDocumento(documento) {
+        return axios.put(`api/patrimonios/incorporacao/${documento.incorporacao}/documentos/${documento.id}`, documento)
+    }
+&nbsp;
+    async buscarDocumentos(incorporacaoId) {
+        return axios.get(`api/patrimonios/incorporacao/${incorporacaoId}/documentos`)
+    }
+&nbsp;
+    async uploadAnexoDocumento(formData){
+        return axios.post('api/v1/arquivos',formData,{headers:{'Content-Type':'multipart/form-data'}})
+    }
+&nbsp;
+    async downloadAnexo(anexo){
+        return axios.get('api/v1/arquivos',{params:{'uri':anexo}})
+    }
+&nbsp;
+    async buscarTipoDocumento() {
+        return axios.get('api/tiposdocumentos?page=1&amp;size=12')
+    }
+&nbsp;
+    async deletarDocumento(documento){
+        return axios.delete(`api/patrimonios/incorporacao/${documento.incorporacao}/documentos/${documento.id}`)
+    }
+&nbsp;
+    async buscarSituacaoIncorporacao(incorporacaoId) {
+        return axios.get(`api/patrimonios/incorporacao/${incorporacaoId}/situacao`)
+    }
+}
+&nbsp;
+export default new IncorporacaoApiClient()
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

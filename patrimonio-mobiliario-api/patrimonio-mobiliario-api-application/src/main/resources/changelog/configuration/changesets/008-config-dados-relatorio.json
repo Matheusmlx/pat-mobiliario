@@ -1,0 +1,19 @@
+[
+    {
+        "key": "az.patrimonio-mobiliario.integracao.sistema-de-relatorios",
+        "value": "hal-report"
+    },
+    {
+        "key": "az.patrimonio-mobiliario.relatorio",
+        "value": {
+            "header": {
+                "titulo1": "PATRIMÔNIO MOBILIÁRIO - AZ INFORMÁTICA",
+                "titulo2": "Sistema de gestão de bens móveis"
+            },
+            "footer": {
+                "rodape1": "R. Vinte e Cinco de Dezembro, 2071 - Centro, Campo Grande - MS, 79010-220",
+                "rodape2": "Telefone: +556733032727"
+            }
+        }
+    }
+]

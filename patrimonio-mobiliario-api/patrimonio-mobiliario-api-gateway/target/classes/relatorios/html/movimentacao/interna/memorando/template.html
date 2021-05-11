@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Memorando de Movimentações</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/movimentacao_interna_memorando.css"/>
+</head>
+<body>
+<div class="header">
+    <table style="position: absolute; top: 0">
+        <tr>
+            <td class="col-9 left">
+                <span th:text="${dataHoraUsuario}" class="header-left"></span>
+            </td>
+            <td class="col-1 right">
+                <span class="header-right">Página <span id="pagenumber"></span> de <span id="pagecount"></span></span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <div class="col-4 imagem-cabecalho" style="display: flex; justify-items: center; justify-content: center;margin: auto;width:50%;">
+        <img th:src="|data:image/png;base64,${logoRelatorio}|" alt="Logo do cliente" style="display:flex;width:30%;height:114px;margin-left:auto;margin-right:auto"/>
+    </div>
+</div>
+
+<div class="titulos">
+    <h1 class="titulo">
+        <strong>Memorando de <span th:text="${relatorio.tipo}"></span></strong>
+    </h1>
+
+    <p th:text="${relatorio.orgao}"></p>
+    <p th:text="${relatorio.mesAnoEnvio}"></p>
+</div>
+
+<h3 class="titulo-h3">DADOS GERAIS</h3>
+<table class="tabela-dados-gerais" cellpadding="2">
+
+    <tr th:if="${relatorio.temporaria == false}" >
+        <td style="width: 25%"><strong>N° Memorando: </strong> <span th:text="${#strings.isEmpty(relatorio.numeroMemorando)} ? '-': ${relatorio.numeroMemorando}"></span></td>
+        <td style="width: 25%"><strong>Nº Movimentação: </strong> <span th:text="${#strings.isEmpty(relatorio.numeroMovimentacao)} ? '-': ${relatorio.numeroMovimentacao}"></span></td>
+        <td style="width: 25%"><strong>Nº processo: </strong>
+            <span  th:text="${#strings.isEmpty(relatorio.numeroProcesso)} ? '-': ${#strings.abbreviate(relatorio.numeroProcesso,20)}  "></span>
+        </td>
+        <td  style="width: 25%; border-right: 1px solid #ccc"><strong>Finalizado em: </strong> <span th:text="${#strings.isEmpty(relatorio.dataFinalizacao)} ? '-': ${relatorio.dataFinalizacao}"></span></td>
+    </tr>
+
+    <tr th:if="${relatorio.temporaria == true}" >
+        <td style="width: 33%"><strong>N° Memorando: </strong> <span th:text="${#strings.isEmpty(relatorio.numeroMemorando)} ? '-': ${relatorio.numeroMemorando}"></span></td>
+        <td colspan="2" style="width: 33%"><strong>Nº Movimentação: </strong> <span th:text="${#strings.isEmpty(relatorio.numeroMovimentacao)} ? '-': ${relatorio.numeroMovimentacao}"></span></td>
+        <td style="width: 34%; border-right: 1px solid #ccc"><strong>Nº processo: </strong>
+            <span  th:text="${#strings.isEmpty(relatorio.numeroProcesso)} ? '-': ${#strings.abbreviate(relatorio.numeroProcesso,20)}  "></span>
+        </td>
+    </tr>
+
+    <tr th:if="${relatorio.temporaria == true}">
+        <td style="width: 33%"><strong>Enviado em: </strong> <span th:text="${#strings.isEmpty(relatorio.dataEnvio)} ? '-': ${relatorio.dataEnvio}"></span></td>
+        <td colspan="2" style="width: 33%"><strong>Devolver em: </strong> <span th:text="${#strings.isEmpty(relatorio.dataEsperadaDevolucao)} ? '-': ${relatorio.dataEsperadaDevolucao}"></span></td>
+        <td style="width: 34%; border-right: 1px solid #ccc"><strong>Devolvido em: </strong> <span th:text="${#strings.isEmpty(relatorio.dataFinalizacao)} ? '-': ${relatorio.dataFinalizacao}"></span></td>
+    </tr>
+
+    <tr>
+        <td colspan="2" style="vertical-align: top"><strong th:text="${labelSetorOrigem}"></strong> <span th:text="${#strings.isEmpty(relatorio.setorOrigem)} ? '-': ${relatorio.setorOrigem}"></span></td>
+        <td colspan="2" style="vertical-align: top; border-right: 1px solid #ccc"><strong th:text="${labelSetorDestino}"></strong> <span th:text="${#strings.isEmpty(relatorio.setorDestino)} ? '-': ${relatorio.setorDestino}"></span></td>
+    </tr>
+
+    <tr>
+        <td colspan="4"><strong>Motivo/Observações: </strong> <span th:text="${#strings.isEmpty(relatorio.motivoObs)} ? '-': ${relatorio.motivoObs}"></span></td>
+    </tr>
+
+</table>
+
+<h3 th:text="${relatorio.possuiItens} == true ? 'DADOS CONTÁBEIS' : ' '"class="titulo-h3">DADOS CONTÁBEIS</h3>
+<div style="min-height: 350px">
+    <table th:if="${relatorio.temporaria}" class="tabela-dados-contabeis" th:each="contaContabil : ${relatorio.contasContabeis}">
+
+        <thead>
+            <strong> <th colspan="6" th:text="${contaContabil.descricao}"></th> </strong>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>N° Patrimônio</strong></td>
+                <td><strong>Descrição</strong></td>
+                <td><strong>Valor de Entrada</strong></td>
+                <td><strong>Depreciação Acumulada</strong></td>
+                <td><strong>Valor Líquido</strong></td>
+                <td><strong>Devolvido em</strong></td>
+            </tr>
+
+            <tr th:each="patrimonio : ${contaContabil.patrimonios}">
+                <td style="width: 10%"  th:text="${patrimonio.numero}"></td>
+                <td style="width: 50%"  th:text="${patrimonio.descricao}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorEntrada)}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorDepreciadoAcumulado)}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorLiquido)}"></td>
+                <td style="width: 10%"  th:text="${#strings.isEmpty(patrimonio.devolvidoNaData)} ? '-': ${patrimonio.devolvidoNaData}"></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="tabela-dados-contabeis-totalizadores">
+                <td colspan="2"><strong>Total da Conta</strong></td>
+                <td ><strong th:text="${df.format(contaContabil.valorEntrada)}"></strong></td>
+                <td ><strong th:text="${df.format(contaContabil.valorDepreciadoAcumulado)}"></strong></td>
+                <td colspan="2"><strong th:text="${df.format(contaContabil.valorLiquido)}"></strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <table th:if="${relatorio.temporaria == false}" class="tabela-dados-contabeis" th:each="contaContabil : ${relatorio.contasContabeis}">
+
+        <thead>
+            <strong> <th colspan="5" th:text="${contaContabil.descricao}"></th> </strong>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>N° Patrimônio</strong></td>
+                <td><strong>Descrição</strong></td>
+                <td><strong>Valor de Entrada</strong></td>
+                <td><strong>Depreciação Acumulada</strong></td>
+                <td><strong>Valor Líquido</strong></td>
+            </tr>
+
+            <tr th:each="patrimonio : ${contaContabil.patrimonios}">
+                <td style="width: 10%"  th:text="${patrimonio.numero}"></td>
+                <td style="width: 60%"  th:text="${patrimonio.descricao}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorEntrada)}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorDepreciadoAcumulado)}"></td>
+                <td style="width: 10%"  th:text="${df.format(patrimonio.valorLiquido)}"></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="tabela-dados-contabeis-totalizadores">
+                <td style="width: 69.5%" colspan="2"><strong>Total da Conta</strong></td>
+                <td style="width: 10.5%"><strong th:text="${df.format(contaContabil.valorEntrada)}"></strong></td>
+                <td style="width: 10%"><strong th:text="${df.format(contaContabil.valorDepreciadoAcumulado)}"></strong></td>
+                <td style="width: 10%"><strong th:text="${df.format(contaContabil.valorLiquido)}"></strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <div th:if="${relatorio.possuiItens}">
+        <table  th:if="${relatorio.temporaria}" class="tabela-total-orgao">
+            <thead>
+                <strong>
+                    <th colspan="2" style=" width: 59.5%">Total do Órgão</th>
+                    <th style="width: 10.5%;"><strong th:text="${df.format(relatorio.valorEntrada)}"></strong></th>
+                    <th style="width: 10%;"><strong th:text="${df.format(relatorio.valorDepreciadoAcumulado)}"></strong></th>
+                    <th colspan="2" style="width: 20%;"><strong th:text="${df.format(relatorio.valorLiquido)}"></strong></th>
+                </strong>
+            </thead>
+        </table>
+
+
+        <table  th:if="${relatorio.temporaria == false}" class="tabela-total-orgao">
+            <thead>
+                <strong>
+                    <th colspan="2" style="width: 69.5%">Total do Órgão</th>
+                    <th style="width: 10.5%"><strong th:text="${df.format(relatorio.valorEntrada)}"></strong></th>
+                    <th style="width: 10%"><strong th:text="${df.format(relatorio.valorDepreciadoAcumulado)}"></strong></th>
+                    <th style="width: 10%"><strong th:text="${df.format(relatorio.valorLiquido)}"></strong></th>
+                </strong>
+            </thead>
+        </table>
+    </div>
+
+
+
+
+</div >
+    <table th:class="${relatorio.possuiItens ? 'assinatura' : 'assinatura-sem-itens'}">
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+
+        <tr>
+            <td align="center">Nome/Matrícula</td>
+            <td align="center">Nome/Matrícula</td>
+            <td align="center">Nome/Matrícula</td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Data</td>
+            <td align="center">Data</td>
+            <td align="center">Data</td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Responsável pelo Núcleo de Almoxarifado</td>
+            <td align="center">Responsável pelo Núcleo de Patrimônio</td>
+            <td align="center">Visto</td>
+        </tr>
+    </table>
+<div class="mensagem-rodape ">
+    <p th:text="${relatorio.emElaboracao} == true ?
+            'Esse memorando ainda não tem valor contábil final, visto que a movimentação ainda não foi finalizada' : ' '"></p>
+</div>
+</body>
+</html>

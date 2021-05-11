@@ -1,0 +1,9 @@
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (1, 'Alice');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (2, 'Carol');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (3, 'João');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (4, 'Douglas');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (5, 'Beatriz');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (6, 'Carla');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (7, 'Ana');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (8, 'Diego');
+INSERT INTO pat_mobiliario.tb_responsavel(res_id, res_nome) VALUES (9, 'Júlia');

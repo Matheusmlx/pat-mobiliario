@@ -1,0 +1,7 @@
+package br.com.azi.patrimoniomobiliario.domain.usecase.movimentacao.interna.temporaria.bucarpatrimoniosdevolucao;
+
+import br.com.azi.patrimoniomobiliario.domain.usecase.UseCase;
+
+public interface BuscarPatrimoniosDevolucaoMovimentacaoTemporariaUseCase extends UseCase<BuscarPatrimoniosDevolucaoMovimentacaoTemporariaInputData, BuscarPatrimoniosDevolucaoMovimentacaoTemporariaOutputData> {
+
+}

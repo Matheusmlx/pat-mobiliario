@@ -1,0 +1,6 @@
+package br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.pororgao.buscarproximointervalo;
+
+import br.com.azi.patrimoniomobiliario.domain.usecase.UseCase;
+
+public interface BuscarProximoIntervaloDisponivelPorOrgaoUseCase extends UseCase<BuscarProximoIntervaloDisponivelPorOrgaoInputData, BuscarProximoIntervaloDisponivelPorOrgaoOutputData> {
+}

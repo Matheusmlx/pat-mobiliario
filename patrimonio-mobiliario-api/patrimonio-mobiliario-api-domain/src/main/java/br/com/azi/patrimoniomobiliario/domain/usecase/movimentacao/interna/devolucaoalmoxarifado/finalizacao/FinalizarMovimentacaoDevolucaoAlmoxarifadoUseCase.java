@@ -1,0 +1,6 @@
+package br.com.azi.patrimoniomobiliario.domain.usecase.movimentacao.interna.devolucaoalmoxarifado.finalizacao;
+
+import br.com.azi.patrimoniomobiliario.domain.usecase.UseCase;
+
+public interface FinalizarMovimentacaoDevolucaoAlmoxarifadoUseCase extends UseCase<FinalizarMovimentacaoDevolucaoAlmoxarifadoInputData, FinalizarMovimentacaoDevolucaoAlmoxarifadoOutputData> {
+}

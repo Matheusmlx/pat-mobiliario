@@ -1,0 +1,1764 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/pages/patrimonios/incorporacao/visualizacao/dados-gerais/VisualizarIncorporacao.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/pages/patrimonios/incorporacao/visualizacao/dados-gerais</a> VisualizarIncorporacao.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130x</span>
+<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-yes">66x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2429x</span>
+<span class="cline-any cline-yes">1264x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">103x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">138x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">706x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div&gt;
+        &lt;v-form class="az-form-content pb-0" ref="form"&gt;
+            &lt;v-container class="white form-dados-gerais-visualizacao" fluid&gt;
+                &lt;v-row&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.reconhecimento"
+                            disabled
+                            :placeholder="' '"
+                            name="reconhecimento"
+                            :items="reconhecimentos"
+                            item-text="nome"
+                            item-value="id"
+                            :filter="filtroComboAutoComplete"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="reconhecimento" :tela="nomeTela" apresentaTooltip :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-text-field
+                            v-model="dadosDeEntrada.numProcesso"
+                            disabled
+                            :placeholder="' '"
+                            name="número do processo"
+                            maxlength="30"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="numProcesso" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-text-field&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-autocomplete
+                            style="max-height:35px;"
+                            v-model="dadosDeEntrada.fornecedor"
+                            disabled
+                            :placeholder="' '"
+                            :items="fornecedores"
+                            :filter="filtroAutocompleteFornecedores"
+                            item-text="cpfCnpj"
+                            item-value="id"
+                            name="CNPJ Fornecedor"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="fornecedor" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                        &lt;az-text-view
+                            :text="dadosDeEntrada.fornecedor ? $options.filters.fornecedorFilter(dadosDeEntrada.fornecedor, fornecedores) : ''" class="mt-2"/&gt;
+                    &lt;/v-col&gt;
+                &lt;/v-row&gt;
+                &lt;div class="empenhoBorder"&gt;
+                    &lt;empenho v-for="(empenho, index) in empenhos" :key="empenho.id"
+                             :value="empenho"
+                             :quantidadeEmpenhos="empenhos.length"
+                             :primeiroEmpenho="index === 0"
+                             :obrigatorio="empenhoObrigatorio"
+                             :status-reconhecimento="!dadosDeEntrada.reconhecimento"
+                             @buscarEmpenhos="buscaEmpenhos"/&gt;
+                &lt;/div&gt;
+                &lt;v-row&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-text-field
+                            v-model="dadosDeEntrada.nota"
+                            disabled
+                            :placeholder="' '"
+                            name="número da nota"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="nota" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-text-field&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;az-date
+                            v-model="dadosDeEntrada.dataNota"
+                            is-disabled
+                            :placeholderDate="'__/__/____'"
+                            name-date="data nota"
+                            date&gt;
+                            &lt;template v-slot:label-date&gt;
+                                &lt;label-personalizado campo="dataNota" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/az-date&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;az-money
+                            v-if="dadosDeEntrada.id"
+                            v-model="dadosDeEntrada.valorNota"
+                            disabled
+                            :placeholder="' '"
+                            class="botaoExcluirMoney"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="valorNota" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/az-money&gt;
+                    &lt;/v-col&gt;
+                &lt;/v-row&gt;
+                &lt;v-row&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.orgao"
+                            disabled
+                            :placeholder="' '"
+                            item-text="descricao"
+                            item-value="id"
+                            name="orgaoResponsavel"
+                            :items="orgaos"
+                            :filter="filtroComboAutoComplete"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="orgao" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+&nbsp;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.setor"
+                            disabled
+                            :placeholder="' '"
+                            item-text="descricao"
+                            item-value="id"
+                            name="setor"
+                            :items="setores"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="setor" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao apresentaTooltip/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;az-date
+                            v-model="dadosDeEntrada.dataRecebimento"
+                            is-disabled
+                            :placeholderDate="'__/__/____'"
+                            name-date="recebimento"
+                            date&gt;
+                            &lt;template v-slot:label-date&gt;
+                                &lt;label-personalizado campo="dataRecebimento" :tela="nomeTela" :permissaoEdicao="false" obrigatorioPorPadrao/&gt;
+                            &lt;/template&gt;
+                        &lt;/az-date&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;v-text-field
+                            v-model="dadosDeEntrada.numeroNotaLancamentoContabil"
+                            disabled
+                            :placeholder="' '"
+                            name="número da NL"
+                            v-mask="'####NL######'"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="numeroNotaLancamentoContabil" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-text-field&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12"&gt;
+                        &lt;az-date
+                            v-model="dadosDeEntrada.dataNotaLancamentoContabil"
+                            is-disabled
+                            :placeholderDate="'__/__/____'"
+                            name-date="data da NL"
+                            date&gt;
+                            &lt;template v-slot:label-date&gt;
+                                &lt;label-personalizado campo="dataNotaLancamentoContabil" :tela="nomeTela" :permissaoEdicao="false" /&gt;
+                            &lt;/template&gt;
+                        &lt;/az-date&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12" class="pt-0"&gt;
+                        &lt;p class="titulo_checkbox pb-0"&gt;&lt;label-personalizado campo="origem" :tela="nomeTela" :apenasNome="true"/&gt;&lt;/p&gt;
+                        &lt;v-row class="checkbox_input tamanhoCheckbox"&gt;
+                            &lt;v-col cols="3"&gt;
+                                &lt;v-checkbox
+                                    v-model="dadosDeEntrada.origemConvenio"
+                                    disabled
+                                    label="Convênio"
+                                    class="tamanhoCheckbox"/&gt;
+                            &lt;/v-col&gt;
+                            &lt;v-col cols="3"&gt;
+                                &lt;v-checkbox
+                                    v-model="dadosDeEntrada.origemFundo"
+                                    disabled
+                                    label="Fundo"
+                                    class="checkbox__fundo"/&gt;
+                            &lt;/v-col&gt;
+                            &lt;v-col cols="3"&gt;
+                                &lt;v-checkbox
+                                    v-model="dadosDeEntrada.origemProjeto"
+                                    disabled
+                                    label="Projeto"
+                                    class="checkbox__projeto"/&gt;
+                            &lt;/v-col&gt;
+                            &lt;v-col cols="3"&gt;
+                                &lt;v-checkbox
+                                    v-model="dadosDeEntrada.origemComodato"
+                                    disabled
+                                    label="Comodato"
+                                    class="checkbox__comodato"/&gt;
+                            &lt;/v-col&gt;
+&nbsp;
+                        &lt;/v-row&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12" v-if="dadosDeEntrada.origemConvenio"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.convenio"
+                            disabled
+                            :placeholder="' '"
+                            name="convenio"
+                            :items="convenios"
+                            item-text="nome"
+                            item-value="id"
+                            hide-no-data
+                            hide-selected
+                            :filter="filtroComboAutoComplete"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="convenio" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12" v-if="dadosDeEntrada.origemFundo"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.fundo"
+                            disabled
+                            :placeholder="' '"
+                            name="fundo"
+                            :items="fundos"
+                            item-text="descricao"
+                            item-value="id"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="fundo" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12" v-if="dadosDeEntrada.origemProjeto"&gt;
+                        &lt;v-text-field
+                            v-model="dadosDeEntrada.projeto"
+                            disabled
+                            :placeholder="' '"
+                            name="projeto"
+                            maxlength="100"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="projeto" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-text-field&gt;
+                    &lt;/v-col&gt;
+                    &lt;v-col cols="12" md="4" sm="6" xs="12" v-if="dadosDeEntrada.origemComodato"&gt;
+                        &lt;v-autocomplete
+                            v-model="dadosDeEntrada.comodante"
+                            disabled
+                            :placeholder="' '"
+                            :items="comodantes"
+                            :filter="filtroComboAutoComplete"
+                            item-text="nome"
+                            item-value="id"
+                            name="Comodante"&gt;
+                            &lt;template v-slot:label&gt;
+                                &lt;label-personalizado campo="comodante" :tela="nomeTela" :permissaoEdicao="false"/&gt;
+                            &lt;/template&gt;
+                        &lt;/v-autocomplete&gt;
+                    &lt;/v-col&gt;
+                &lt;/v-row&gt;
+            &lt;/v-container&gt;
+        &lt;/v-form&gt;
+        &lt;acoes-botoes-continuar-voltar :controleContinuar="podeContinuar" @voltar="tratarEventoVoltar"
+                                       @continuar="tratarEventoContinuar"/&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import {actionTypes} from '@/core/constants'
+    import Empenho from '@/views/components/empenho/Empenho'
+    import {createNamespacedHelpers, mapActions} from 'vuex'
+    import AzHasPermissions from '@azinformatica/loki/src/utils/AzHasPermissions'
+    import LabelPersonalizado from '@/views/components/label/LabelPersonalizado'
+    import AcoesBotoesContinuarVoltar from '@/views/components/acoes/AcoesBotoesContinuarVoltar'
+&nbsp;
+    const {mapGetters} = createNamespacedHelpers('rotulosPersonalizados')
+&nbsp;
+    export default {
+        name: 'dadosGerais',
+        components: {Empenho, LabelPersonalizado, AcoesBotoesContinuarVoltar},
+        data() {
+            return {
+                dadosDeEntrada: {},
+                empenhos: [{incorporacaoId: this.$route.params.incorporacaoId}],
+                reconhecimentos: [],
+                fornecedores: [],
+                comodantes: [],
+                convenios: [],
+                fundos: [],
+                orgaos: [],
+                setores: [],
+                cnpjPesquisadoContemMascara: false,
+                empenhoObrigatorio: false,
+                notaObrigatorio: false,
+                reconhecimentoInativo: false,
+                fornecedorInativo: false,
+                orgaoInativo: false,
+                setorInativo: false,
+                nomeTela: 'INCORPORACAO_DADOS_GERAIS',
+                labelBtnCancel: 'Remover',
+                cpfCnpj: ''
+            }
+        },
+        async mounted() {
+            await this.buscaIncorporacao()
+            this.trataCamposReconhecimentoFornecedor()
+            this.trataCampoComodante()
+            await this.buscaOrgaos()
+            await this.buscarSetores()
+            this.trataCamposOrgaoSetor()
+            this.verificarSePodeProsseguir()
+            await this.buscarTodosFundos()
+        },
+        computed: {
+            ...mapGetters([
+                'getObrigatorioRotulosPersonalizados',
+                'getIncorporacaoValidado'
+            ]),
+            verificaPermissaoRetroativa() {
+                return AzHasPermissions(this.$store.state.loki.user.authorities, ['Mobiliario.Retroativo'])
+            },
+            dataPermitida() {
+                let date = new Date()
+                return new Date(date.getFullYear(), date.getMonth(), 1)
+            },
+            podeContinuar() {
+                if(this.empenhoObrigatorio){
+                    if(!this.verificarSeTodosEmpenhosObrigatoriosEstaoPreenchidos()){
+                        return false
+                    }
+                }
+                return this.getIncorporacaoValidado(this.dadosDeEntrada,
+                                                    this.dadosDeEntrada.origemConvenio,
+                                                    this.dadosDeEntrada.origemFundo,
+                                                    this.dadosDeEntrada.origemProjeto,
+                                                    this.dadosDeEntrada.origemComodato,
+                                                    this.notaObrigatorio,
+                                                    this.nomeTela)
+            }
+        },
+        filters: {
+            fornecedorFilter(id, fornecedores) {
+                const encontados = fornecedores.filter(f =&gt; f.id === id)
+<span class="branch-0 cbranch-no" title="branch not covered" >                return encontados.length &gt; 0 ? encontados[0].nome : ''</span>
+            },
+        },
+        methods: {
+            ...mapActions([
+                actionTypes.COMUM.BUSCAR_FUNDOS,
+                actionTypes.COMUM.BUSCAR_TODOS_ORGAOS,
+                actionTypes.COMUM.BUSCAR_SETORES_ALMOXARIFADO,
+                actionTypes.CONFIGURACAO.RECONHECIMENTO.BUSCAR_RECONHECIMENTOS_AUTO_COMPLETE,
+                actionTypes.PATRIMONIO.INCORPORACAO.EMPENHO.BUSCAR_TODOS_EMPENHOS,
+                actionTypes.PATRIMONIO.INCORPORACAO.EMPENHO.INSERIR_EMPENHO,
+                actionTypes.CONFIGURACAO.CONVENIO.BUSCAR_CONVENIO_POR_ID,
+                actionTypes.PATRIMONIO.INCORPORACAO.BUSCAR_INCORPORACAO_POR_ID
+            ]),
+            async buscaEmpenhos() {
+                const resultado = await this.buscarTodosEmpenhos(this.$route.params.incorporacaoId)
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (resultado &amp;&amp; resultado.items.length &gt; 0) {
+                    this.empenhos = resultado.items
+                }
+                this.verificarSePodeProsseguir()
+            },
+            async buscaIncorporacao() {
+                this.dadosDeEntrada = await this.buscarIncorporacaoPorId(this.$route.params.incorporacaoId)
+                await this.buscarReconhecimentos()
+                await this.buscarConvenio()
+                await this.buscaEmpenhos()
+            },
+            trataCamposReconhecimentoFornecedor(){
+                this.trataCampoReconhecimento()
+                this.trataCampoFornecedor()
+            },
+            trataCamposOrgaoSetor(){
+                this.trataCampoOrgao()
+                this.trataCampoSetor()
+            },
+            trataCampoReconhecimento(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(this.dadosDeEntrada &amp;&amp; this.dadosDeEntrada.reconhecimento){
+                    if(this.dadosDeEntrada.reconhecimento.situacao === 'INATIVO'){
+                        this.dadosDeEntrada.reconhecimento.disabled = true
+                        this.reconhecimentoInativo = true
+                        this.reconhecimentos.unshift(this.dadosDeEntrada.reconhecimento)
+<span class="missing-if-branch" title="else path not taken" >E</span>                    }else if(this.dadosDeEntrada.reconhecimento.situacao === 'ATIVO'){
+                        this.reconhecimentoInativo = false
+                    }
+                }
+            },
+            trataCampoFornecedor(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(this.dadosDeEntrada &amp;&amp; this.dadosDeEntrada.fornecedor) {
+                    if (this.dadosDeEntrada.fornecedor.situacao === 'INATIVO') {
+                        this.dadosDeEntrada.fornecedor.disabled = true
+                        this.fornecedorInativo = true
+                        this.fornecedores.unshift(this.dadosDeEntrada.fornecedor)
+<span class="missing-if-branch" title="else path not taken" >E</span>                    } else if(this.dadosDeEntrada.fornecedor.situacao === 'ATIVO') {
+                        this.fornecedorInativo = false
+                        this.fornecedores.push(this.dadosDeEntrada.fornecedor)
+                    }
+                }
+            },
+            trataCampoComodante(){
+                if(this.dadosDeEntrada.comodante){
+                    this.comodantes.push(this.dadosDeEntrada.comodante)
+                }
+            },
+            trataCampoOrgao(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(this.dadosDeEntrada &amp;&amp; this.dadosDeEntrada.orgao) {
+                    if (this.dadosDeEntrada.orgao.situacao === 'INATIVO') {
+                        this.dadosDeEntrada.orgao.disabled = true
+                        this.orgaoInativo = true
+                        this.orgaos.unshift(this.dadosDeEntrada.orgao)
+<span class="missing-if-branch" title="else path not taken" >E</span>                    } else if(this.dadosDeEntrada.orgao.situacao === 'ATIVO'){
+                        this.orgaoInativo = false
+                    }
+                }
+            },
+            trataCampoSetor(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(this.dadosDeEntrada &amp;&amp; this.dadosDeEntrada.setor) {
+                    if (this.dadosDeEntrada.setor.situacao === 'INATIVO') {
+                        this.dadosDeEntrada.setor.disabled = true
+                        this.setorInativo = true
+                        this.setores.unshift(this.dadosDeEntrada.setor)
+<span class="missing-if-branch" title="else path not taken" >E</span>                    } else if(this.dadosDeEntrada.setor.situacao === 'ATIVO'){
+                        this.setorInativo = false
+                    }
+                }
+            },
+            async buscarConvenio() {
+                if (this.dadosDeEntrada.convenio) {
+                    let convenio = await this.buscarConvenioPorId(this.dadosDeEntrada.convenio)
+                    this.dadosDeEntrada.convenio = convenio.id
+                    this.convenios.push(convenio)
+                }
+            },
+            async buscarReconhecimentos() {
+                this.setMensagemLoading('Carregando...')
+                const resultado = await this.buscarReconhecimentosAutoComplete()
+                this.reconhecimentos = resultado.items
+                this.verificaSeEmpenhoEOuNotaObrigatorio()
+            },
+            filtroComboAutoComplete(item, queryText) {
+                const text = item.nome.toLowerCase()
+                const searchText = queryText.toLowerCase()
+                return text.indexOf(searchText) &gt; -1
+            },
+<span class="branch-0 cbranch-no" title="branch not covered" >            formataCnpj(cnpj = '') {</span>
+                cnpj = cnpj.replace(/\D/g, '')
+                cnpj = cnpj.replace(
+                    /(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
+                    '$1.$2.$3/$4-$5'
+                )
+                return cnpj
+            },
+            verificarSePodeProsseguir() {
+                if (this.podeContinuar) {
+                    this.$emit('habilitaPasso2')
+                } else {
+                    this.$emit('desabilitaPasso2')
+                }
+            },
+            verificarSeTodosEmpenhosObrigatoriosEstaoPreenchidos() {
+                return this.empenhos.every(empenho =&gt; empenho.numeroEmpenho &amp;&amp; empenho.dataEmpenho &amp;&amp; empenho.valorEmpenho &amp;&amp; empenho.valorEmpenho!==0)
+            },
+            selecionarReconhecimento() {
+                return this.reconhecimentos.filter(reconhecimento =&gt; reconhecimento.id === this.dadosDeEntrada.reconhecimento.id)
+            },
+            verificaSeEmpenhoEOuNotaObrigatorio() {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (this.dadosDeEntrada.reconhecimento !== null) {
+                    const reconhecimentoSelecionado = this.selecionarReconhecimento()
+&nbsp;
+                    if (reconhecimentoSelecionado.length &gt; 0) {
+                        this.empenhoObrigatorio = reconhecimentoSelecionado[0].empenho
+                        this.notaObrigatorio = reconhecimentoSelecionado[0].notaFiscal
+                    }
+                }
+                this.verificarSePodeProsseguir()
+            },
+            async buscaOrgaos() {
+                this.desabilitarLoadingGlobal()
+                const resultado = await this.buscarTodosOrgaos()
+                this.habilitarLoadingGlobal()
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (resultado) {
+                    this.orgaos = resultado.items
+                }
+            },
+            async selecionaOrgao() {
+                this.dadosDeEntrada.setor = null
+                this.setores = []
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (this.dadosDeEntrada.orgao) {
+                    const resultado = await this.buscarSetoresAlmoxarifado(this.dadosDeEntrada.orgao)
+                    this.setores = resultado.items
+                    await this.buscarTodosFundos()
+                }
+            },
+            async buscarSetores() {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (this.dadosDeEntrada.orgao) {
+<span class="branch-1 cbranch-no" title="branch not covered" >                    const resultado = await this.buscarSetoresAlmoxarifado(this.dadosDeEntrada.orgao.id ? this.dadosDeEntrada.orgao.id : this.dadosDeEntrada.orgao)</span>
+                    this.setores = resultado.items
+                }
+            },
+            async buscarTodosFundos() {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (this.dadosDeEntrada.orgao) {
+<span class="branch-1 cbranch-no" title="branch not covered" >                    const resultado = await this.buscarFundos(this.dadosDeEntrada.orgao.id ? this.dadosDeEntrada.orgao.id : this.dadosDeEntrada.orgao)</span>
+                    this.fundos = resultado.items
+                }
+            },
+            filtroAutocompleteFornecedores(item, queryText) {
+                const textOne = item.nome.toLowerCase()
+                const searchText = queryText.toLowerCase()
+&nbsp;
+                if (item.cpfCnpj) {
+                    const textTwo = item.cpfCnpj
+                    return textOne.indexOf(searchText) &gt; -1 ||
+                        textTwo.indexOf(searchText) &gt; -1
+                }
+                return textOne.indexOf(searchText) &gt; -1
+            },
+            tratarEventoVoltar() {
+                this.$router.push({name: 'IncorporacaoListagem'})
+            },
+            tratarEventoContinuar() {
+                this.$router.push({name: 'ItensIncorporacaoListagem', params: {incorporacaoId: this.$route.params.incorporacaoId}})
+            },
+        }
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style scoped lang="stylus"&gt;
+.form-dados-gerais-visualizacao
+    min-height 62vh
+&nbsp;
+.tamanhoCheckbox
+    height 20px
+    .checkbox__fundo
+        margin-left 5px
+    .checkbox__projeto
+        margin-left -7px
+    .checkbox__comodato
+        margin-left -16px
+&nbsp;
+.titulo_checkbox
+    font-size 14px
+    color #777777
+    display inline-flex
+    margin-left 5px
+    font-weight bold
+    margin-bottom 0!important
+&nbsp;
+.empenhoBorder
+    width 100%
+    padding-top 8px
+    margin-bottom 15px
+    border-style solid
+    border-radius 5px
+    border-color #7777
+    border-width 1px
+&nbsp;
+&gt;&gt;&gt;
+    @media (max-width: 1280px)
+        .tamanhoCheckbox
+            label
+                font-size 13px
+            .v-input--selection-controls__input
+                margin-right 0
+                width 12px
+                padding-right 4px
+            .v-input--selection-controls__input:first-child
+                margin-left 5px
+            .v-input--selection-controls__ripple:before,
+            .v-ripple__container
+                top 3px
+                bottom 3px
+                left -5px
+                right 10px
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../sorter.js"></script>
+</body>
+</html>

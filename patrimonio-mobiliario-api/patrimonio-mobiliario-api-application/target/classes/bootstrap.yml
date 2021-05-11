@@ -1,0 +1,9 @@
+server:
+  port: ${port:0}
+spring:
+  cloud:
+    config:
+      uri: ${HAL_CONFIG_URL}
+logging:
+  level:
+    root: INFO

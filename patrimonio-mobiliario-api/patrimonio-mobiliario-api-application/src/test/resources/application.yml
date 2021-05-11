@@ -1,0 +1,71 @@
+application:
+    name: patrimonio-mobiliario
+    version: latest
+logging:
+    path: target
+hal:
+    config:
+        migration:
+            enabled: false
+    liquibase:
+        schemas:
+            - comum
+            - comum_siga
+            - comum_pat
+            - pat_mobiliario
+            - hal
+
+spring:
+    application:
+        name: patrimonio-mobiliario
+    datasource:
+        driver-class-name: org.h2.Driver
+        name: az
+        url: jdbc:h2:mem:testdb
+        username: sa
+        password: ''
+        initial-size: 5
+        max-active: 30
+        max-idle: 10
+        max-wait: 60000
+        min-evictable-idle-time-millis: 60000
+        min-idle: 5
+        testOnBorrow: false
+        testWhileIdle: false
+        time-between-eviction-runs-millis: 5000
+        validationQuery: SELECT 1
+    h2:
+        console:
+            enabled: true
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: none
+    liquibase:
+        change-log: "classpath:/changelog/database/master.xml"
+        enabled: true
+    profiles:
+        default: test
+    session:
+        store-type: none
+
+az:
+    patrimonio-mobiliario:
+        integracao:
+            sistema-de-arquivos: "hal"
+            sistema-de-fornecedores: "efornecedor"
+            hal:
+                url: "http://localhost:8022/setup/hal"
+                repository: "repo1:patrimoniomobiliario"
+            efornecedor:
+                url: "http://localhost:8023/efornecedor/efcaz-api"
+            hal-config:
+                url: "http://localhost:8024/hal-config/settings"
+        quantidade-digitos-numero-patrimonio: "10"
+        patrimonio-para-conta-almoxarifado: false
+        limite-registros-processamento-sincrono: 1
+        cron-agendamento-depreciacao: "-"
+        cron-dia-agendamento-depreciacao: "-"
+        cron-remover-notificacoes-antigas: "-"
+        deprecia-em-almoxarifado: true
+        reserva-patrimonial-global: true

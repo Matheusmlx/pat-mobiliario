@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/pages/configuracao/conta-contabil/listagem/ContaContabilListagemForm.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/pages/configuracao/conta-contabil/listagem</a> ContaContabilListagemForm.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;v-data&gt;
+        &lt;tr&gt;
+            &lt;template v-if="!modoEdicao"&gt;
+                &lt;td&gt;{{value.codigo}}&lt;/td&gt;
+                &lt;td class="formatContaContabil"&gt;{{value.descricao}}&lt;/td&gt;
+                &lt;td&gt;{{value.tipo | azEnum(tipoContaContabil)}}&lt;/td&gt;
+                &lt;td&gt;{{value.tipoBem | azEnum(tipoBem)}}&lt;/td&gt;
+                &lt;td&gt;{{value.vidaUtil ? value.vidaUtil : ''}}&lt;/td&gt;
+                &lt;td&gt;{{value.percentualResidual ?  $options.filters.valorParaPorcentagem(value.percentualResidual) : ''}}&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;botao-icone-editar v-if="permitirAcoes" @ativarEdicao="ativarModoEdicao" /&gt;
+                &lt;/td&gt;
+            &lt;/template&gt;
+            &lt;template v-if="modoEdicao" class="grey"&gt;
+                &lt;td class="v-data-table_selected"&gt;{{value.codigo}}&lt;/td&gt;
+                &lt;td class="formatContaContabil v-data-table_selected"&gt;{{value.descricao}}&lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;az-combo-enum
+                        v-model="value.tipo"
+                        class="input_conta_contabil"
+                        name="tipo"
+                        is-required
+                        :enum-object="tipoContaContabil"
+                        :insert-null-item="false"
+                        placeholder="Selecione"
+                        @input="mudarTipo"/&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;az-combo-enum
+                        v-model="value.tipoBem"
+                        class="input_conta_contabil"
+                        name="tipoBem"
+                        is-required
+                        :enum-object="tipoBem"
+                        :insert-null-item="false"
+                        placeholder="Selecione"/&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;v-text-field
+                        v-if="depreciavel"
+                        v-model="value.vidaUtil"
+                        maxlength="6"
+                        type="number"
+                        class="input_conta_contabil"
+                        min="0"
+                        name="vidaUtil"
+                        v-mask="'#####'"
+                        placeholder="Informe vida útil"
+                        v-validate="value.tipo === 'DEPRECIAVEL' ? 'required|max:100' : ''"
+                        :error-messages="errors.collect('vidaUtil')"/&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;az-money
+                        v-if="depreciavel"
+                        v-model="value.percentualResidual"
+                        :required="value.tipo === 'DEPRECIAVEL'"
+                        :maxLength="6"
+                        placeholder="Informe % residual"
+                        name="percentualResidual"
+                        requerid-message="O campo é obrigatório"
+                        :validation-field="validateRequeridAzMoney"
+                        class="input_conta_contabil"
+                        :prefix="''"
+                        :suffix="'%'"/&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;acoes-icones-salvar-cancelar @salvar="salvar" @cancelar="cancelar"/&gt;
+                &lt;/td&gt;
+            &lt;/template&gt;
+        &lt;/tr&gt;
+    &lt;/v-data&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import {mapState} from 'vuex'
+    import AcoesIconesSalvarCancelar from '@/views/components/acoes/AcoesIconesSalvarCancelar'
+    import BotaoIconeEditar from '@/views/components/botoes/BotaoIconeEditar'
+&nbsp;
+    export default {
+        name: 'ContaContabilListagemTabela',
+        components:{BotaoIconeEditar, AcoesIconesSalvarCancelar},
+        props: {
+            value: {
+                required: true
+            },
+            permitirAcoes: {
+                required: true
+            }
+        },
+        data() {
+            return {
+                modoEdicao: false,
+                validateRequeridAzMoney: 0
+            }
+        },
+        computed: {
+            ...mapState(['contaContabil']),
+            depreciavel() {
+                return this.value.tipo !== 'NAO_DEPRECIAVEL'
+            }
+        },
+        watch: {
+            'value'() {
+                this.desativarModoEdicao()
+            },
+            'contaContabil.todasContasContabeis.filtros.conteudo.value'() {
+                this.habilitarAcoes()
+                this.desativarModoEdicao()
+            },
+            'contaContabil.todasContasContabeis.paginacao.page'() {
+                this.habilitarAcoes()
+                this.desativarModoEdicao()
+            },
+            'value.percentualResidual'() {
+                this.anulaPercentualSeMaiorQuePermitido()
+            }
+        },
+        methods: {
+            ativarModoEdicao() {
+                this.modoEdicao = true
+                this.$validator._base.reset()
+                this.desativarAcoes()
+                this.mudarTipo(this.value.tipo)
+            },
+            cancelar() {
+                this.desativarModoEdicao()
+                this.$emit('cancelarEdicao')
+            },
+            desativarAcoes() {
+                this.$emit('desativarAcoes')
+            },
+            desativarModoEdicao() {
+                this.modoEdicao = false
+                this.$validator._base.reset()
+            },
+            habilitarAcoes() {
+                this.$emit('habilitarAcoes')
+            },
+            async salvar() {
+                this.validateRequeridAzMoney ++
+                this.anulaCamposQueNaoDevemSerPreenchidos()
+                this.anulaVidaUtilSeIgualAZero()
+                this.anulaPercentualSeIgualAZero()
+&nbsp;
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (await this.validarDadosFormulario()) {
+                    this.desativarModoEdicao()
+                    this.mostrarNotificacaoAviso('Atenção: alterar o tipo da conta contábil não afeta operações realizadas anteriormente')
+                    this.$emit('salvar', this.value)
+                }
+            },
+            async validarDadosFormulario() {
+                return await this.$validator._base.validateAll()
+            },
+            mudarTipo(tipo) {
+                this.$emit('alterarTipo', tipo)
+            },
+            anulaCamposQueNaoDevemSerPreenchidos() {
+                if (this.value.tipo === 'NAO_DEPRECIAVEL') {
+                    this.value.vidaUtil = null
+                    this.value.percentualResidual = null
+                }
+            },
+            anulaVidaUtilSeIgualAZero() {
+                if (this.value.vidaUtil === '0') {
+                    this.value.vidaUtil = null
+                }
+            },
+            anulaPercentualSeMaiorQuePermitido() {
+                if (this.value.percentualResidual &gt; 99.99) {
+                    this.value.percentualResidual = null
+                    this.mostrarNotificacaoAviso('Percentual residual não deve ser maior que 99,99%.')
+                }
+            },
+            anulaPercentualSeIgualAZero() {
+                if (this.value.percentualResidual === 0) {
+                    this.value.percentualResidual = null
+                }
+            }
+        },
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus"&gt;
+    .input_conta_contabil
+        padding-top 0 !important
+&nbsp;
+    .desabilitarEdicao
+        button
+            visibility hidden !important
+&nbsp;
+    .formatContaContabil
+        font-size 13px !important
+&nbsp;
+    .label_input
+        font-size 15px
+        font-weight bold
+        color #777 !important
+&nbsp;
+    .inputNome
+        margin-top 3px
+        padding-top 3px
+&nbsp;
+    .botoes_acoes
+        display inline-flex
+&nbsp;
+        button
+            margin 0 !important
+            padding 0 !important
+            visibility visible !important
+            display inline-flex !important
+&nbsp;
+    .max-20
+        max-width 20vw
+&nbsp;
+    @media (max-width 720px)
+        .inputNome
+            margin-top 0 !important
+&nbsp;
+    .v-btn--icon.v-size--default .v-icon, .v-btn--fab.v-size--default .v-icon
+        width 2px !important;
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../sorter.js"></script>
+</body>
+</html>

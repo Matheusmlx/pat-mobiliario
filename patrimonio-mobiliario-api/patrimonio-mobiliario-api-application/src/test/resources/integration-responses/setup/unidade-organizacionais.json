@@ -1,0 +1,242 @@
+[
+    {
+        "id": 5141,
+        "nome": "Assessoria de Comunicação Social",
+        "sigla": "ASCOM",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0002"
+    },
+    {
+        "id": 4767,
+        "nome": "Assessoria de Tecnologia em Informação",
+        "sigla": "ASTI",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0013"
+    },
+    {
+        "id": 5256,
+        "nome": "Bens Patrimoniais a Localizar",
+        "sigla": "BPL",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004.0001.0001"
+    },
+    {
+        "id": 5255,
+        "nome": "Bens Patrimoniais a Localizar e Outros Bens",
+        "sigla": "BPLOB",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004.0001"
+    },
+    {
+        "id": 5808,
+        "nome": "Divisão de Cobranças",
+        "sigla": "COB",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0009.0002"
+    },
+    {
+        "id": 5253,
+        "nome": "Conselho Diretor",
+        "sigla": "CONDIR",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0001"
+    },
+    {
+        "id": 5251,
+        "nome": "Conselho Administrativo",
+        "sigla": "CONSAD",
+        "codigoHierarquia": "0002.0005.0007.0016"
+    },
+    {
+        "id": 8689,
+        "nome": "Comissão de Recursos da Avaliação de Desempenho",
+        "sigla": "CRADIAEM",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0015"
+    },
+    {
+        "id": 5804,
+        "nome": "Divisão de Auditoria Interna",
+        "sigla": "DAI",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0005.0001"
+    },
+    {
+        "id": 5809,
+        "nome": "Divisão de Apoio Operacional a PGF",
+        "sigla": "DAOP",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0009.0003"
+    },
+    {
+        "id": 4554,
+        "nome": "Divisão de Compras, Licitações e Contratos",
+        "sigla": "DCLC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0005"
+    },
+    {
+        "id": 1127,
+        "nome": "Divisão de Contabilidade",
+        "sigla": "DCONT",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0002"
+    },
+    {
+        "id": 5805,
+        "nome": "Divisão de Documentação",
+        "sigla": "DDOC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0005.0002"
+    },
+    {
+        "id": 1126,
+        "nome": "Divisão de Execução Orçamentária e Financeira",
+        "sigla": "DEOF",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0001"
+    },
+    {
+        "id": 4552,
+        "nome": "Diretoria Executiva",
+        "sigla": "DEXEC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0007"
+    },
+    {
+        "id": 1128,
+        "nome": "Divisão de Gestão de Pessoal",
+        "sigla": "DGP",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0003"
+    },
+    {
+        "id": 5802,
+        "nome": "Divisão de Fiscalização de Produtos",
+        "sigla": "DIF",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0004.0001"
+    },
+    {
+        "id": 5145,
+        "nome": "Diretoria de Gestão da Qualidade",
+        "sigla": "DIGESQ",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0005"
+    },
+    {
+        "id": 4559,
+        "nome": "Diretoria Juridica",
+        "sigla": "DIJUR",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0009"
+    },
+    {
+        "id": 5146,
+        "nome": "Diretoria de Laboratórios de Ensaios e Calibração",
+        "sigla": "DILEC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0006"
+    },
+    {
+        "id": 1120,
+        "nome": "Diretoria Técnica de Metrologia Legal",
+        "sigla": "DIMEL",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0008"
+    },
+    {
+        "id": 4560,
+        "nome": "Divisão de Permissionárias",
+        "sigla": "DIPERM",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0008.0007"
+    },
+    {
+        "id": 5252,
+        "nome": "Diretoria da Presidência",
+        "sigla": "DIPRE",
+        "codigoHierarquia": "0002.0005.0007.0016.0001"
+    },
+    {
+        "id": 1122,
+        "nome": "Diretoria de Administração e Finanças",
+        "sigla": "DIRAF",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003"
+    },
+    {
+        "id": 5144,
+        "nome": "Diretoria Técnica de Avaliação da Conformidade",
+        "sigla": "DIVAC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0004"
+    },
+    {
+        "id": 5807,
+        "nome": "Divisão de Notificação, Análise e Tramitação de Processos",
+        "sigla": "DNATP",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0009.0001"
+    },
+    {
+        "id": 1129,
+        "nome": "Divisão de Patrimônio e Almoxarifado",
+        "sigla": "DPA",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004"
+    },
+    {
+        "id": 5806,
+        "nome": "Divisão de Produtos Pré-Medidos",
+        "sigla": "DPPRE",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0006.0003"
+    },
+    {
+        "id": 4573,
+        "nome": "Divisão de Posto de Verificação de Caminhões Tanques e Cronotacógrafo",
+        "sigla": "DPVCTC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0008.0010"
+    },
+    {
+        "id": 5803,
+        "nome": "Divisão de Registros",
+        "sigla": "DREG",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0004.0002"
+    },
+    {
+        "id": 4555,
+        "nome": "Divisão de Transportes e Serviços Gerais",
+        "sigla": "DTSG",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0006"
+    },
+    {
+        "id": 4561,
+        "nome": "Divisão de Verificação de Trânsito e Taxímetro",
+        "sigla": "DVTT",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0008.0008"
+    },
+    {
+        "id": 5739,
+        "nome": "Divisão de Verificação de Medidores de Energia Elétrica",
+        "sigla": "LABEN",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0006.0002"
+    },
+    {
+        "id": 5737,
+        "nome": "Divisão de Calibração de Massas",
+        "sigla": "LACMASS",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0006.0001"
+    },
+    {
+        "id": 4556,
+        "nome": "Divisão de Verificação de Instrumento de Medição",
+        "sigla": "METRO",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0008.0004"
+    },
+    {
+        "id": 5257,
+        "nome": "Outros Bens",
+        "sigla": "OB",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004.0001.0002"
+    },
+    {
+        "id": 5142,
+        "nome": "Ouvidoria",
+        "sigla": "OUVID",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0010"
+    },
+    {
+        "id": 1530,
+        "nome": "Procuradoria Jurídica",
+        "sigla": "PROJUR",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0011"
+    },
+    {
+        "id": 7447,
+        "nome": "Serviço de Informação ao Cidadão",
+        "sigla": "SIC-AEM",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0014"
+    },
+    {
+        "id": 5140,
+        "nome": "Supervisão Técnica",
+        "sigla": "SUTEC",
+        "codigoHierarquia": "0002.0005.0007.0016.0001.0012"
+    }
+]

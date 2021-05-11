@@ -1,0 +1,6 @@
+[
+    {
+        "key": "az.patrimonio-mobiliario.cron-remover-notificacoes-antigas",
+        "value": "0 0 1 * * *"
+    }
+]

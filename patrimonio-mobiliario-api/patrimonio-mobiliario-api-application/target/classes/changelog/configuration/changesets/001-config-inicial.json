@@ -1,0 +1,170 @@
+[
+  {
+    "key": "hystrix.command.default.execution.timeout.enabled",
+    "value": false
+  },
+  {
+    "key": "ribbon.ConnectTimeout",
+    "value": 60000
+  },
+  {
+    "key": "ribbon.ReadTimeout",
+    "value": 60000
+  },
+  {
+    "key": "eureka.client.serviceUrl.defaultZone",
+    "value": "${HAL_DISCOVERY_URL}/eureka/"
+  },
+  {
+    "key": "eureka.instance.instance-id",
+    "value": "${spring.application.name}:${spring.application.instance_id:${random.value}}"
+  },
+  {
+    "key": "eureka.instance.prefer-ip-address",
+    "value": true
+  },
+  {
+    "key": "eureka.instance.leaseRenewalIntervalInSeconds",
+    "value": 5
+  },
+  {
+    "key": "eureka.instance.lease-expiration-duration-in-seconds",
+    "value": 5
+  },
+  {
+    "key": "hal.liquibase.schemas",
+    "value": "pat_mobiliario"
+  },
+  {
+    "key": "spring.profiles.default",
+    "value": "prod"
+  },
+  {
+    "key": "spring.liquibase.change-log",
+    "value": "classpath:/changelog/database/master.xml"
+  },
+  {
+    "key": "spring.liquibase.contexts",
+    "value": "${LIQUIBASE_CONTEXTS}"
+  },
+  {
+    "key": "spring.liquibase.database-change-log-lock-table",
+    "value": "DATABASECHANGELOGLOCK"
+  },
+  {
+    "key": "spring.liquibase.database-change-log-table",
+    "value": "DATABASECHANGELOG"
+  },
+  {
+    "key": "spring.liquibase.enabled",
+    "value": true
+  },
+  {
+    "key": "spring.liquibase.liquibase-schema",
+    "value": "pat_mobiliario"
+  },
+  {
+    "key": "spring.jackson.serialization.write_dates_as_timestamps",
+    "value": false
+  },
+  {
+    "key": "spring.jackson.date-format",
+    "value": "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  },
+  {
+    "key": "spring.jpa.show-sql",
+    "value": true
+  },
+  {
+    "key": "spring.jpa.database-platform",
+    "value": "${DATABASE_PLATFORM}"
+  },
+  {
+    "key": "spring.jpa.hibernate.ddl-auto",
+    "value": "none"
+  },
+  {
+    "key": "spring.jpa.properties.hibernate.format_sql",
+    "value": false
+  },
+  {
+    "key": "spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults",
+    "value": false
+  },
+  {
+    "key": "spring.datasource.name",
+    "value": "unico"
+  },
+  {
+    "key": "spring.datasource.driver-class-name",
+    "value": "${DATABASE_CLASSNAME}"
+  },
+  {
+    "key": "spring.datasource.url",
+    "value": "${DATABASE_URL}"
+  },
+  {
+    "key": "spring.datasource.username",
+    "value": "${DATABASE_USERNAME}"
+  },
+  {
+    "key": "spring.datasource.password",
+    "value": "${DATABASE_PASSWORD}"
+  },
+  {
+    "key": "spring.datasource.max-wait",
+    "value": 60000
+  },
+  {
+    "key": "spring.datasource.max-active",
+    "value": 30
+  },
+  {
+    "key": "spring.datasource.initial-size",
+    "value": 5
+  },
+  {
+    "key": "spring.datasource.max-idle",
+    "value": 10
+  },
+  {
+    "key": "spring.datasource.min-idle",
+    "value": 5
+  },
+  {
+    "key": "spring.datasource.testOnBorrow",
+    "value": true
+  },
+  {
+    "key": "spring.datasource.validationQuery",
+    "value": "${DATABASE_VALIDATION_QUERY}"
+  },
+  {
+    "key": "spring.datasource.testWhileIdle",
+    "value": true
+  },
+  {
+    "key": "spring.datasource.time-between-eviction-runs-millis",
+    "value": 5000
+  },
+  {
+    "key": "spring.datasource.min-evictable-idle-time-millis",
+    "value": 60000
+  },
+  {
+    "key": "spring.servlet.multipart.max-file-size",
+    "value": "16MB"
+  },
+  {
+    "key": "spring.servlet.multipart.max-request-size",
+    "value": "20MB"
+  },
+  {
+    "key": "spring.rabbitmq.host",
+    "value": "${RABBITMQ_HOST}"
+  },
+  {
+    "key": "spring.rabbitmq.port",
+    "value": "${RABBITMQ_PORT}"
+  }
+]

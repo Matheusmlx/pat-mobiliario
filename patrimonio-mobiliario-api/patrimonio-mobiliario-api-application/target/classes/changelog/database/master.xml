@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="001-carga-produto" author="raiza.oliveira">
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/001-carga-produto.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/001-carga-produto.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="002-carga-seguranca" author="raiza.oliveira">
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/002-carga-seguranca.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/002-carga-seguranca.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="003-carga-desenv-setup" author="raiza.oliveira" context="desenv">
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/003-carga-desenv-setup.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/003-carga-desenv-setup.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="004-estrutura-inicial" author="raiza.oliveira">
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/004-estrutura-inicial.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/004-estrutura-inicial.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="005-carga-desenv-usuario-setup" author="raiza.oliveira" context="desenv">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/005-carga-desenv-usuario-setup.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/005-carga-desenv-usuario-setup.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="006-carga-desenv-efornecedor" author="raiza.oliveira" context="desenv">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/006-carga-desenv-efornecedor.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/006-carga-desenv-efornecedor.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="007-carga-desenv-pat" author="raiza.oliveira" context="desenv">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/007-carga-desenv-pat.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/007-carga-desenv-pat.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="008-trigger-incorporacao" author="raiza.oliveira">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/008-trigger-incorporacao.sql"
+                 relativeToChangelogFile="true" splitStatements="false"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/008-trigger-incorporacao.sql"
+                 relativeToChangelogFile="true" splitStatements="true"/>
+    </changeSet>
+
+    <changeSet id="009-atributo-logo-relatorio-e-favicon" author="raiza.oliveira">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/009-atributo-logo-relatorio-e-favicon.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/009-atributo-logo-relatorio-e-favicon.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+
+    <changeSet id="010-job-batch" author="raiza.oliveira">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/010-job-batch.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/010-job-batch.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="011-scheduler-lock" author="adolfo.hengling">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/011-scheduler-lock.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/011-scheduler-lock.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="012-usuario-integracao" author="adolfo.hengling">
+        <sqlFile dbms="postgresql" encoding="utf8" path="postgresql/012-usuario-integracao.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+        <sqlFile dbms="mssql" encoding="utf8" path="mssql/012-usuario-integracao.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+</databaseChangeLog>

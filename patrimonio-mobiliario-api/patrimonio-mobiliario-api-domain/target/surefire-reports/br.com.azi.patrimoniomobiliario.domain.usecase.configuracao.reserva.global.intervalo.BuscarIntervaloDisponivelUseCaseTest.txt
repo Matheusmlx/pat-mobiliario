@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.042 s <<< FAILURE! - in br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest
+deveFalharQuandoReservaNaoEncontrada(br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.buscarintervalodisponivel.exception.ReservaNaoEncontradaException> but was<java.lang.NullPointerException>
+	at br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest.deveFalharQuandoReservaNaoEncontrada(BuscarIntervaloDisponivelUseCaseTest.java:80)
+
+deveFalharSeQuantidadeInformadaInvalida(br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.buscarintervalodisponivel.exception.QuantidadeInvalidaException> but was<java.lang.NullPointerException>
+	at br.com.azi.patrimoniomobiliario.domain.usecase.configuracao.reserva.global.intervalo.BuscarIntervaloDisponivelUseCaseTest.deveFalharSeQuantidadeInformadaInvalida(BuscarIntervaloDisponivelUseCaseTest.java:103)
+

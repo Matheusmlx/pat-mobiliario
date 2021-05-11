@@ -1,0 +1,7 @@
+package br.com.azi.patrimoniomobiliario.domain.usecase.movimentacao.interna.relatorios.memorando.memorandomovimentacaofinalizada;
+
+
+import br.com.azi.patrimoniomobiliario.domain.usecase.UseCase;
+
+public interface GerarMemorandoMovimentacaoInternaFinalizadaUseCase extends UseCase<GerarMemorandoMovimentacaoInternaFinalizadaInputData, GerarMemorandoMovimentacaoInternaFinalizadaOutputData> {
+}

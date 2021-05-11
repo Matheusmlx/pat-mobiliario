@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/components/modal/incorporacao/adicionaritem/itempatrimonio/visualizacao/tipoVeiculo/TipoVeiculoTabela.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/components/modal/incorporacao/adicionaritem/itempatrimonio/visualizacao/tipoVeiculo</a> TipoVeiculoTabela.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div&gt;
+        &lt;v-layout column&gt;
+                &lt;v-data-table
+                    ref="table"
+                    :headers="colunas"
+                    :items="itens"
+                    :server-items-length="totalItens"
+                    :options.sync="paginacaoInterna"
+                    :loading="false"
+                    no-data-text="Não há registros de patrimônios"
+                    class="tabela-modal-incorporacao-itens item-patrimonio-tabela"
+                    must-sort
+                    hide-default-footer&gt;
+                    &lt;template v-slot:header.numero&gt;
+                        &lt;label-personalizado campo="numero" :tela="nomeTela" :apenasNome="true"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.valorAquisicao&gt;
+                        &lt;label-personalizado campo="valorAquisicao" :tela="nomeTela" :apenasNome="true"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.placa&gt;
+                        &lt;label-personalizado campo="placa" :tela="nomeTela"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.renavam&gt;
+                        &lt;label-personalizado campo="renavam" :tela="nomeTela"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.licenciamento&gt;
+                        &lt;label-personalizado campo="licenciamento" :tela="nomeTela"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.motor&gt;
+                        &lt;label-personalizado campo="motor" :tela="nomeTela"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:header.chassi="item"&gt;
+                        &lt;label-personalizado campo="chassi" :tela="nomeTela"/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.numero="{item}"&gt;
+                        &lt;span class="d-inline-block text-truncate max-10"&gt;{{item.numero}}&lt;/span&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.valorAquisicao="{item}"&gt;
+                        &lt;span v-if="item.diferencaDizima" class="d-inline-block text-truncate max-13"&gt;
+                            {{ item.valorAquisicao | valorParaDinheiro }}
+                            &lt;tooltip-informativo :tela="nomeTela" campos="valorAquisicao"
+                                                 mensagemPadraoTooltip="Esse patrimônio recebeu um arrendondamento devido a dízimas periódicas"/&gt;
+                        &lt;/span&gt;
+                        &lt;span v-else
+                              class="d-inline-block text-truncate max-10"&gt;{{ item.valorAquisicao | valorParaDinheiro }}&lt;/span&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.placa="{item}"&gt;
+                        &lt;v-text-field
+                            v-model="item.placa"
+                            name="placa"
+                            disabled
+                            placeholder=" "
+                            maxlength="50"
+                            v-validate="getObrigatorioRotulosPersonalizados('placa', 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO') ? 'required|max:50' : ''"
+                            :error-messages="errors.collect('placa')"
+                            dense/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.renavam="{item}"&gt;
+                        &lt;v-text-field
+                            v-model="item.renavam"
+                            name="renavam"
+                            disabled
+                            placeholder=" "
+                            maxlength="50"
+                            v-validate="getObrigatorioRotulosPersonalizados('renavam', 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO') ? 'required|max:50' : ''"
+                            :error-messages="errors.collect('renavam')"
+                            dense/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.licenciamento="{item}"&gt;
+                        &lt;v-text-field
+                            v-model="item.licenciamento"
+                            name="licenciamento"
+                            disabled
+                            placeholder=" "
+                            maxlength="50"
+                            v-validate="getObrigatorioRotulosPersonalizados('licenciamento', 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO') ? 'required|max:50' : ''"
+                            :error-messages="errors.collect('licenciamento')"
+                            dense/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.motor="{item}"&gt;
+                        &lt;v-text-field
+                            v-model="item.motor"
+                            name="motor"
+                            disabled
+                            placeholder=" "
+                            maxlength="50"
+                            v-validate="getObrigatorioRotulosPersonalizados('motor', 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO') ? 'required|max:50' : ''"
+                            :error-messages="errors.collect('motor')"
+                            dense/&gt;
+                    &lt;/template&gt;
+                    &lt;template v-slot:item.chassi="{item}"&gt;
+                        &lt;v-text-field
+                            v-model="item.chassi"
+                            name="chassi"
+                            disabled
+                            placeholder=" "
+                            maxlength="50"
+                            v-validate="getObrigatorioRotulosPersonalizados('chassi', 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO') ? 'required|max:50' : ''"
+                            :error-messages="errors.collect('chassi')"
+                            dense/&gt;
+                    &lt;/template&gt;
+                &lt;/v-data-table&gt;
+            &lt;paginacao :paginacao-interna="paginacaoInterna" :paginas="paginas" @resetaPage="resetaPage" class="mr-5 ml-5"/&gt;
+        &lt;/v-layout&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import {createNamespacedHelpers} from 'vuex'
+    import {mutationTypes} from '@/core/constants'
+    import LabelPersonalizado from '@/views/components/label/LabelPersonalizado'
+    import Paginacao from '@/views/components/tabela/Paginacao'
+    import TooltipInformativo from '@/views/components/tooltip/TooltipInformativo'
+&nbsp;
+    const {mapGetters} = createNamespacedHelpers('rotulosPersonalizados')
+    export default {
+        name: 'TipoVeiculoTabela',
+        components: {Paginacao, LabelPersonalizado, TooltipInformativo},
+        props: ['itens', 'paginacao', 'paginas', 'totalItens'],
+        data() {
+            return {
+                paginacaoInterna: this.paginacao,
+                nomeTela: 'INCORPORACAO_ITEM_LISTAGEM_PATRMONIO'
+            }
+        },
+        computed:{
+            ...mapGetters(['getObrigatorioRotulosPersonalizados']),
+            colunas(){
+                return this.criarColunas(7,
+                                         [],
+                                         ['numero','valorAquisicao','placa','renavam','licenciamento','motor','chassi'],
+                                         [true,true,true,true,true,true,true],
+                                         ['left','left','left','left','left','left','left'],
+                                         ['13%','14%','12%','14%','16%','13%','15%'],
+                                         'gray--text')
+            }
+        },
+        methods: {
+            tratarPaginacaoVisualizacao(pagina) {
+                this.paginacaoInterna.page = pagina
+            },
+            resetaPage() {
+                this.$store.commit(mutationTypes.PATRIMONIO.RESETA_PAGE_PATRIMONIO)
+            },
+        },
+        watch: {
+            paginacaoInterna: {
+                handler(novoValor) {
+                    this.$emit('paginar', novoValor)
+                },
+                deep: true,
+            },
+        },
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus"&gt;
+&nbsp;
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../../../sorter.js"></script>
+</body>
+</html>

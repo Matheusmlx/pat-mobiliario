@@ -1,0 +1,10 @@
+[
+    {
+        "key": "az.patrimonio-mobiliario.patrimonio-para-conta-almoxarifado",
+        "value":  true
+    },
+    {
+        "key": "az.patrimonio-mobiliario.codigo-conta-contabil-almoxarifado",
+        "value":  "123110800"
+    }
+]

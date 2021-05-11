@@ -1,0 +1,30 @@
+{
+    "content": [
+        {
+            "id": 5141,
+            "nome": "Assessoria de Comunicação Social",
+            "sigla": "ASCOM",
+            "codigoHierarquia": "0002.0005.0007.0016.0001.0002"
+        },
+        {
+            "id": 4767,
+            "nome": "Assessoria de Tecnologia em Informação",
+            "sigla": "ASTI",
+            "codigoHierarquia": "0002.0005.0007.0016.0001.0013"
+        },
+        {
+            "id": 5256,
+            "nome": "Bens Patrimoniais a Localizar",
+            "sigla": "BPL",
+            "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004.0001.0001"
+        },
+        {
+            "id": 5255,
+            "nome": "Bens Patrimoniais a Localizar e Outros Bens",
+            "sigla": "BPLOB",
+            "codigoHierarquia": "0002.0005.0007.0016.0001.0003.0004.0001"
+        }
+    ],
+    "totalElements": 4,
+    "totalPages": 1
+}

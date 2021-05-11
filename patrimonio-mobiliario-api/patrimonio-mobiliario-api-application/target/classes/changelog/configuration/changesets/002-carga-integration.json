@@ -1,0 +1,24 @@
+[
+  {
+    "key": "az.patrimonio-mobiliario.integracao",
+    "value": {
+      "sistema-de-arquivos": "hal",
+      "sistema-de-fornecedores": "efornecedor",
+      "sistema-de-gestao-administrativa": "hal",
+      "usuario" : {
+          "login": "integracaopatmob",
+          "senha": "RyxTO1WUt6"
+      },
+      "hal" : {
+        "url": "${HAL_URL}",
+        "repository": "repo1:patrimoniomobiliario"
+      },
+      "hal-config":{
+          "url": "${CONFIG_URL}"
+      },
+      "efornecedor":{
+          "url": "${EFORNECEDOR_URL}"
+      }
+    }
+  }
+]

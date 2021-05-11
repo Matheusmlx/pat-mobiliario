@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/core/store/comum/mutations.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/core/store/comum</a> mutations.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vue from 'vue'
+import {mutationTypes, produto} from '@/core/constants'
+import FileManagerUtils from '@/core/utils/FileManagerUtils'
+&nbsp;
+export default {
+&nbsp;
+    [mutationTypes.COMUM.SET_EXPANDIR_MENU](state) {
+        Vue.set(state.loki, 'asideClosed', false)
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_LINK_ARQUIVO](state) {
+        Vue.set(state.loki.file, 'api', '/patrimonio-mobiliario/api/v1/arquivos')
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_MENU_AVATAR](state) {
+        const actions = {
+            1: { title: 'Perfil', icon: 'person', path: '/perfil' }
+        }
+        Vue.set(state.loki, 'avatarActions', actions)
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_PRODUTO](state, data) {
+        state.loki.product.id = data.id
+        state.loki.product.name = data.nome
+        state.loki.product.mainLogo = FileManagerUtils.createUrl(data.atributosExtendidos.logoMenu)
+        state.loki.product.symbolLogo = FileManagerUtils.createUrl(data.atributosExtendidos.logoMenuRetraido)
+        state.loki.product.logoMobile = FileManagerUtils.createUrl(data.atributosExtendidos.logoMobile)
+        state.loki.product.version = produto.VERSAO
+        state.loki.product.copywrite = produto.COPYRIGHT
+        state.loki.product.logoutUrl = produto.LOGOUT_URL
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_RETRAIR_MENU](state) {
+        Vue.set(state.loki, 'asideClosed', true)
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_USUARIO_LOGADO](state, usuario) {
+        const user = {
+            id: usuario.userId,
+            name: usuario.userName,
+            fullName: usuario.name,
+            photo: FileManagerUtils.createThumbnailUrl(usuario.imageUrl),
+            type: usuario.tipoUsuario,
+            domains: usuario.domains,
+            domainId: usuario.domainId,
+            domainName: usuario.domainName,
+            domainType: usuario.domainType,
+            authorities: usuario.authorities
+        }
+        Vue.set(state.loki, 'user', user)
+    },
+&nbsp;
+    [mutationTypes.COMUM.SET_PARAMETROS](state, parametros) {
+        state.parametros = parametros
+    },
+&nbsp;
+    [mutationTypes.COMUM.MOSTRAR_FALHA_SALVAMENTO_AUTOMATICO] () {
+<span class="cstat-no" title="statement not covered" >        this.commit(mutationTypes.LOKI.DISABLE_AUTO_SAVING)</span>
+<span class="cstat-no" title="statement not covered" >        this.commit(mutationTypes.LOKI.SET_AUTO_SAVED_MESSAGE, 'Última atualização não salva')</span>
+<span class="cstat-no" title="statement not covered" >        this.commit(mutationTypes.LOKI.SET_SAVING_MESSAGE, '${date} atrás')</span>
+    },
+&nbsp;
+    [mutationTypes.LOKI.ENABLE_AUTO_SAVING] () {
+<span class="cstat-no" title="statement not covered" >        this.commit(mutationTypes.LOKI.SET_AUTO_SAVED_MESSAGE, '&lt;i class="fas fa-check mr-1"&gt;&lt;/i&gt; Salvo Automaticamente')</span>
+<span class="cstat-no" title="statement not covered" >        this.commit(mutationTypes.LOKI.SET_SAVING_MESSAGE, 'Salvo ${date} atrás')</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

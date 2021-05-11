@@ -1,0 +1,98 @@
+[{
+    "i18n": {
+        "CONTA_CONTABIL": {
+            "campos": {
+                "codigoContabil": {
+                    "nome": "Código Contábil"
+                },
+                "contaContabil": {
+                    "nome": "Conta Contábil"
+                },
+                "metodoCalculo": {
+                    "nome": "Método de Cálculo"
+                },
+                "tipoConta": {
+                    "nome": "Tipo da Conta",
+                    "obrigatorio": true
+                },
+                "vidaUtil": {
+                    "nome": "Vida Útil (Meses",
+                    "obrigatorio": true
+                },
+                "residual": {
+                    "nome": "Residual",
+                    "obrigatorio": true
+                }
+            }
+        },
+        "CONVENIO": {
+            "campos": {
+                "numero": {
+                    "nome": "Número"
+                },
+                "nome": {
+                    "nome": "Nome"
+                },
+                "concedente": {
+                    "nome": "Concedente"
+                },
+                "fonteRecurso": {
+                    "nome": "Fonte de Recurso",
+                    "obrigatorio": false
+                },
+                "dataVigenciaInicio": {
+                    "nome": "Início Vigência"
+                },
+                "dataVigenciaFim": {
+                    "nome": "Fim Vigência"
+                },
+                "situacao": {
+                    "nome": "Situação"
+                }
+            }
+        },
+        "CONCEDENTE": {
+            "campos": {
+                "cpfCnpj": {
+                    "nome": "CPF/CNPJ",
+                    "obrigatorio": true
+                },
+                "nome": {
+                    "nome": "Concedente",
+                    "obrigatorio": true
+                },
+                "situacao": {
+                    "nome": "Situação",
+                    "obrigatorio": true
+                }
+            }
+        },
+        "RECONHECIMENTO": {
+            "campos": {
+                "nome": {
+                    "nome": "Nome",
+                    "obrigatorio": true
+                },
+                "situacao": {
+                    "nome": "Situação",
+                    "obrigatorio": true
+                },
+                "execucaoOrcamentaria": {
+                    "nome": "Execução Orçamentária",
+                    "obrigatorio": true
+                },
+                "camposObrigatorios": {
+                    "nome": "Campos obrigatórios"
+                }
+            }
+        },
+        "FICHA_INDIVIDUAL_PATRIMONIO": {
+            "campos": {
+                "contaContabilAtual": {
+                    "nome": "Conta Contábil Atual",
+                    "tooltip": "Caso o patrimônio esteja em alguma movimentação que exija contas temporárias, será informada a conta nesse campo. Caso não esteja, esse campo trará a conta de classificação"
+                }
+            }
+        }
+    }
+}]

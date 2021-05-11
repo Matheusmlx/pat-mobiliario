@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/pages/configuracao/reserva/global/visualizacao/ReservaVisualizacaoDadosGerais.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/pages/configuracao/reserva/global/visualizacao</a> ReservaVisualizacaoDadosGerais.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div class="intervalos-listagem"&gt;
+        &lt;v-row class="white pl-3 pt-3 pr-3 ml-0 mr-0 pb-5"&gt;
+            &lt;v-col cols="12"&gt;
+                &lt;v-card flat class="dados-gerais"&gt;
+                    &lt;v-expansion-panels v-model="exibirPanel" active-class="" flat&gt;
+                        &lt;v-expansion-panel&gt;
+                            &lt;v-expansion-panel-header class="dados-gerais-panel-header"&gt;
+                                &lt;h4 class="titulo"&gt;Órgãos ({{quantidadeIntervalos}})&lt;/h4&gt;
+                            &lt;/v-expansion-panel-header&gt;
+                            &lt;v-expansion-panel-content&gt;
+                                &lt;az-form&gt;
+                                    &lt;v-data-table
+                                        ref="table"
+                                        :headers="colunas"
+                                        :items="intervalos"
+                                        :server-items-length="totalItens"
+                                        :options.sync="paginacaoInterna"
+                                        :loading="false"
+                                        no-data-text="Não há reservas cadastradas"
+                                        class="az-table-list pr-tabela-todos-intervalos-reserva"
+                                        hide-default-footer&gt;
+                                        &lt;template v-slot:item.codigo="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-10"&gt;{{ item.codigo }}&lt;/span&gt;
+                                        &lt;/template&gt;
+                                        &lt;template v-slot:item.orgao="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-25"&gt;{{ item.orgao }}&lt;/span&gt;
+                                        &lt;/template&gt;
+                                        &lt;template v-slot:item.quantidadeReservada="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-10"&gt;{{ item.quantidadeReservada | formataValor }}&lt;/span&gt;
+                                        &lt;/template&gt;
+                                        &lt;template v-slot:item.preenchimento="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-10"&gt;
+                                                {{ item.preenchimento | azEnum(preenchimentoReserva) }}
+                                            &lt;/span&gt;
+                                        &lt;/template&gt;
+                                        &lt;template v-slot:item.intervalo="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-10"&gt;
+                                                {{ item.numeroInicio }} - {{ item.numeroFim }}
+                                            &lt;/span&gt;
+                                        &lt;/template&gt;
+                                        &lt;template v-slot:item.termoGuarda="{item}"&gt;
+                                            &lt;span class="d-inline-block text-truncate max-10 termoDeGuarda" @click="gerarTermoDeGuarda(item)"&gt;
+                                                Baixar
+                                            &lt;/span&gt;
+                                        &lt;/template&gt;
+                                    &lt;/v-data-table&gt;
+                                    &lt;paginacao
+                                        :paginacao-interna="paginacaoInterna"
+                                        :paginas="paginas"
+                                        @resetaPage="resetaPage"/&gt;
+                                &lt;/az-form&gt;
+                            &lt;/v-expansion-panel-content&gt;
+                        &lt;/v-expansion-panel&gt;
+                    &lt;/v-expansion-panels&gt;
+                &lt;/v-card&gt;
+            &lt;/v-col&gt;
+        &lt;/v-row&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import Paginacao from '@/views/components/tabela/Paginacao'
+    import {mapMutations} from 'vuex'
+    import {mutationTypes} from '@/core/constants'
+&nbsp;
+    export default {
+        name: 'ReservaVisualizacaoDadosGerais',
+        props: ['intervalos', 'paginas', 'totalItens', 'paginacao'],
+        components: {Paginacao},
+        data() {
+            return {
+                exibirPanel: 0,
+                paginacaoInterna: this.paginacao
+            }
+        },
+        watch: {
+            paginacaoInterna: {
+                handler(novoValor) {
+                    this.$emit('paginar', novoValor)
+                },
+                deep: true
+            },
+        },
+        computed: {
+            colunas() {
+                return this.criarColunas(
+                    6,
+                    ['Código', 'Órgão', 'Quantidade', 'Preenchimento', 'Intervalo', 'Termo de Guarda'],
+                    ['codigo', 'orgao', 'quantidadeReservada', 'preenchimento', 'intervalo', 'termoGuarda'],
+                    [false, false, false, false, false, false],
+                    ['left', 'left', 'left', 'left', 'left', 'left'],
+                    ['10%', '35%', '14%', '16%', '10%', '20%'],
+                    'gray--text')
+            },
+            quantidadeIntervalos() {
+                return String(this.totalItens).padStart(2, '0')
+            }
+        },
+        methods: {
+            ...mapMutations([mutationTypes.CONFIGURACAO.RESERVA.GLOBAL.INTERVALO.RESETA_PAGE_RESERVA_INTERVALO]),
+            resetaPage() {
+                this.resetaPageReservaIntervalo()
+            },
+            gerarTermoDeGuarda(item) {
+                this.$emit('gerarTermoDeGuarda', item.id)
+            }
+        }
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style scoped lang="stylus"&gt;
+.intervalos-listagem
+    min-height 77vh
+&nbsp;
+.dados-gerais
+    border solid 1px #e7e7e7 !important
+    border-radius 5px !important
+&nbsp;
+.dados-gerais-panel-header
+    border-bottom solid 1px #e7e7e7 !important
+    background-color #F6F6F6
+    border-radius 5px !important
+    min-height 20px !important
+    padding-bottom 10px
+    padding-top 10px
+&nbsp;
+.titulo
+    font-size 15px
+    font-weight bold
+    color #777 !important
+&nbsp;
+.termoDeGuarda:hover
+    cursor pointer
+    text-decoration underline
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../sorter.js"></script>
+</body>
+</html>

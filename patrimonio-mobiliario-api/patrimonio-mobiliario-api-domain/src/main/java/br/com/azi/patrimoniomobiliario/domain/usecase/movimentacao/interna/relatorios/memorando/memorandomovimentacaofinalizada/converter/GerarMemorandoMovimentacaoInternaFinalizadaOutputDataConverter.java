@@ -1,0 +1,8 @@
+package br.com.azi.patrimoniomobiliario.domain.usecase.movimentacao.interna.relatorios.memorando.memorandomovimentacaofinalizada.converter;
+
+import br.com.azi.patrimoniomobiliario.domain.entity.Arquivo;
+import br.com.azi.patrimoniomobiliario.domain.usecase.movimentacao.interna.relatorios.memorando.memorandomovimentacaofinalizada.GerarMemorandoMovimentacaoInternaFinalizadaOutputData;
+import br.com.azi.patrimoniomobiliario.utils.converter.GenericConverter;
+
+public class GerarMemorandoMovimentacaoInternaFinalizadaOutputDataConverter extends GenericConverter<Arquivo, GerarMemorandoMovimentacaoInternaFinalizadaOutputData> {
+}

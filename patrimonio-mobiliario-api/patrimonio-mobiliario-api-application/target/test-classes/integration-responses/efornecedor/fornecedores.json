@@ -1,0 +1,50 @@
+{
+    "content": [
+        {
+            "id": 1,
+            "paisId": 30,
+            "logo": null,
+            "razaoSocial": "Nu Pagamentos S.A.",
+            "fantasia": null,
+            "cpfCnpj": "18236120000158",
+            "dataValidadeCerca": null,
+            "situacao": "ATIVO",
+            "cerca": null,
+            "cercaEmitido": false,
+            "cercaVencido": null,
+            "cadastroSimplificado": false,
+            "penalidadeAtiva": false,
+            "cercaDTO": {
+                "numeroCerca": null,
+                "anoCerca": null,
+                "dataEmissaoCerca": null,
+                "dataAtualizacaoCerca": null,
+                "dataValidadeCerca": null,
+                "situacaoCerca": "INATIVO"
+            },
+            "impedido": null,
+            "municipioId": 4156,
+            "ufId": 12,
+            "naturezaJuridicaId": 1,
+            "ufPaisId": 30,
+            "tipoNaturezaJuridica": "JURIDICA"
+        }
+    ],
+    "totalPages": 1,
+    "totalElements": 1,
+    "last": true,
+    "sort": [
+        {
+            "direction": "DESC",
+            "property": "razaoSocial",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "descending": true,
+            "ascending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 1,
+    "size": 10,
+    "number": 0
+}

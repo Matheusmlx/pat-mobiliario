@@ -1,0 +1,16 @@
+${AnsiColor.BRIGHT_BLUE}        ██████╗  █████╗ ████████╗██████╗ ██╗███╗   ███╗ ██████╗ ███╗   ██╗██╗ ██████╗
+${AnsiColor.BRIGHT_BLUE}        ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗██║████╗ ████║██╔═══██╗████╗  ██║██║██╔═══██╗
+${AnsiColor.BRIGHT_BLUE}        ██████╔╝███████║   ██║   ██████╔╝██║██╔████╔██║██║   ██║██╔██╗ ██║██║██║   ██║
+${AnsiColor.BRIGHT_BLUE}        ██╔═══╝ ██╔══██║   ██║   ██╔══██╗██║██║╚██╔╝██║██║   ██║██║╚██╗██║██║██║   ██║
+${AnsiColor.BRIGHT_BLUE}        ██║     ██║  ██║   ██║   ██║  ██║██║██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║╚██████╔╝
+${AnsiColor.BRIGHT_BLUE}        ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝ ╚═════╝
+${AnsiColor.BRIGHT_BLUE}
+${AnsiColor.BRIGHT_BLUE}            ███╗   ███╗ ██████╗ ██████╗ ██╗██╗     ██╗ █████╗ ██████╗ ██╗ ██████╗
+${AnsiColor.BRIGHT_BLUE}            ████╗ ████║██╔═══██╗██╔══██╗██║██║     ██║██╔══██╗██╔══██╗██║██╔═══██╗
+${AnsiColor.BRIGHT_BLUE}            ██╔████╔██║██║   ██║██████╔╝██║██║     ██║███████║██████╔╝██║██║   ██║
+${AnsiColor.BRIGHT_BLUE}            ██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██║██╔══██║██╔══██╗██║██║   ██║
+${AnsiColor.BRIGHT_BLUE}            ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗██║██║  ██║██║  ██║██║╚██████╔╝
+${AnsiColor.BRIGHT_BLUE}            ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝
+
+${AnsiColor.BRIGHT_RED}:: Spring Boot ::${AnsiColor.BLACK} ${spring-boot.version}
+${AnsiColor.BRIGHT_RED}:: Patrimônio Mobiliário ::${AnsiColor.BLACK} ${application.version}

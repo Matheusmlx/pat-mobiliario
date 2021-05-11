@@ -1,0 +1,53 @@
+changesetList:
+  - name: 001-config-inicial
+    operation: update
+    filePath: /changelog/configuration/changesets/001-config-inicial.json
+  - name: 002-carga-integration
+    operation: update
+    filePath: /changelog/configuration/changesets/002-carga-integration.json
+  - name: 003-rotulos-personalizados
+    operation: update
+    filePath: /changelog/configuration/changesets/003-rotulos-personalizados.json
+  - name: 004-config-numero-patrimonio
+    operation: update
+    filePath: /changelog/configuration/changesets/004-config-numero-patrimonio.json
+  - name: 005-config-divergencia-valores
+    operation: update
+    filePath: /changelog/configuration/changesets/005-config-divergencia-valores.json
+  - name: 006-config-conta-almoxarifado
+    operation: update
+    filePath: /changelog/configuration/changesets/006-config-conta-almoxarifado.json
+  - name: 007-config-url-chat-suporte
+    operation: update
+    filePath: /changelog/configuration/changesets/007-config-url-chat-suporte.json
+  - name: 008-config-dados-relatorio
+    operation: update
+    filePath: /changelog/configuration/changesets/008-config-dados-relatorio.json
+  - name: 009-config-processamento-assincrono
+    operation: update
+    filePath: /changelog/configuration/changesets/009-config-processamento-assincrono.json
+  - name: 010-config-dia-mensal-depreciacao
+    operation: update
+    filePath: /changelog/configuration/changesets/010-config-dia-mensal-depreciacao.json
+  - name: 011-carga-feriados-locais
+    operation: update
+    filePath: /changelog/configuration/changesets/011-carga-feriados-locais.json
+  - name: 012-carga-feriados-nacionais
+    operation: update
+    filePath: /changelog/configuration/changesets/012-carga-feriados-nacionais.json
+  - name: 013-config-job-depreciacao
+    operation: update
+    filePath: /changelog/configuration/changesets/013-config-job-depreciacao.json
+  - name: 014-config-job-agendamento
+    operation: update
+    filePath: /changelog/configuration/changesets/014-config-job-agendamento.json
+  - name: 015-config-job-remover-notificacoes-antigas
+    operation: update
+    filePath: /changelog/configuration/changesets/015-config-job-remover-notificacoes-antigas.json
+  - name: 016-config-deprecia-em-almoxarifado
+    operation: update
+    filePath: /changelog/configuration/changesets/016-config-deprecia-em-almoxarifado.json
+  - name: 017-config-reserva
+    operation: update
+    filePath: /changelog/configuration/changesets/017-config-reserva.json
+

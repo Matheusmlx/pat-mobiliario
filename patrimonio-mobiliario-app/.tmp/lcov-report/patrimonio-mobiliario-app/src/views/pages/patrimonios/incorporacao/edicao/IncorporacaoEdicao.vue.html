@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/pages/patrimonios/incorporacao/edicao/IncorporacaoEdicao.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/pages/patrimonios/incorporacao/edicao</a> IncorporacaoEdicao.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div&gt;
+        &lt;az-back-button :route="{ name: rotaOrigem }" text="Voltar para listagem"/&gt;
+&nbsp;
+        &lt;az-container class="incorporacao-container"&gt;
+            &lt;v-stepper v-model="passoAtual.numero"&gt;
+                &lt;v-stepper-header class="elevation-0 barra-passo"&gt;
+                    &lt;v-spacer/&gt;
+&nbsp;
+                    &lt;v-stepper-step
+                        :complete="passos[0].numero &lt; passoAtual.numero"
+                        :disabled="passos[0].desabilitado"
+                        :editable="!passos[0].desabilitado"
+                        :key="`${passos[0].numero}-header`"
+                        :step="passos[0].numero"
+                        @click="tratarEventoClick(passos[0])"
+                        edit-icon="fas fa-check"&gt;
+                        {{ passos[0].titulo }}
+                    &lt;/v-stepper-step&gt;
+&nbsp;
+                    &lt;v-divider/&gt;
+&nbsp;
+                    &lt;v-tooltip
+                        nudge-left="10"
+                        nudge-top="-22"
+                        max-width="200"
+                        top&gt;
+                        &lt;template v-slot:activator="{ on }"&gt;
+                            &lt;div v-on="on" v-show="passos[1].desabilitado"&gt;
+                                &lt;v-stepper-step
+                                    :complete="passos[1].numero &lt; passoAtual.numero"
+                                    :disabled="passos[1].desabilitado"
+                                    :editable="!passos[1].desabilitado"
+                                    :key="`${passos[1].numero}-header`"
+                                    :step="passos[1].numero"
+                                    @click="tratarEventoClick(passos[1])"
+                                    edit-icon="fas fa-check"
+                                    :class="{'passo-ativo' : !passos[1].desabilitado}"
+                                &gt;{{ passos[1].titulo }}
+                                &lt;/v-stepper-step&gt;
+                            &lt;/div&gt;
+                            &lt;v-stepper-step
+                                :complete="passos[1].numero &lt; passoAtual.numero"
+                                :disabled="passos[1].desabilitado"
+                                :editable="!passos[1].desabilitado"
+                                :key="`${passos[1].numero}-header`"
+                                :step="passos[1].numero"
+                                @click="tratarEventoClick(passos[1])"
+                                edit-icon="fas fa-check"
+                                v-show="!passos[1].desabilitado"
+                                :class="{'passo-ativo' : !passos[1].desabilitado}"
+                            &gt;{{ passos[1].titulo }}
+                            &lt;/v-stepper-step&gt;
+                        &lt;/template&gt;
+                        É necessário que todos os campos obrigatórios sejam preenchidos para continuar.
+                    &lt;/v-tooltip&gt;
+&nbsp;
+                    &lt;v-divider/&gt;
+&nbsp;
+                    &lt;v-tooltip
+                        nudge-left="10"
+                        nudge-top="-20"
+                        max-width="200"
+                        top&gt;
+                        &lt;template v-slot:activator="{ on }"&gt;
+                            &lt;div v-on="on" v-show="passos[2].desabilitado &amp;&amp; !passos[1].desabilitado"&gt;
+                                &lt;v-stepper-step
+                                    :complete="passos[2].numero &lt; passoAtual.numero"
+                                    :disabled="passos[2].desabilitado"
+                                    :editable="!passos[2].desabilitado"
+                                    :key="`${passos[2].numero}-header`"
+                                    :step="passos[2].numero"
+                                    @click="tratarEventoClick(passos[2])"
+                                    edit-icon="fas fa-check"
+                                    :class="{'passo-ativo' : !passos[2].desabilitado}"
+                                &gt;{{ passos[2].titulo }}
+                                &lt;/v-stepper-step&gt;
+                            &lt;/div&gt;
+                            &lt;v-stepper-step
+                                :complete="passos[2].numero &lt; passoAtual.numero"
+                                :disabled="passos[2].desabilitado"
+                                :editable="!passos[2].desabilitado"
+                                :key="`${passos[2].numero}-header`"
+                                :step="passos[2].numero"
+                                @click="tratarEventoClick(passos[2])"
+                                edit-icon="fas fa-check"
+                                v-show="!passos[2].desabilitado || passos[1].desabilitado"
+                                :class="{'passo-ativo' : !passos[2].desabilitado}"
+                            &gt;{{ passos[2].titulo }}
+                            &lt;/v-stepper-step&gt;
+                        &lt;/template&gt;
+                        É necessário que todos os campos obrigatórios sejam preenchidos para continuar.
+                    &lt;/v-tooltip&gt;
+&nbsp;
+                    &lt;v-spacer/&gt;
+&nbsp;
+                    &lt;div&gt;
+                        &lt;botao-remover @remover="tratarEventoDeletarIncorporacao"
+                                       v-if="incorporacaoId &amp;&amp; verificaPermissaoEdicao"/&gt;
+                    &lt;/div&gt;
+                &lt;/v-stepper-header&gt;
+&nbsp;
+                &lt;v-divider/&gt;
+&nbsp;
+                &lt;v-stepper-items&gt;
+                    &lt;v-stepper-content
+                        :key="`${passo.numero}-content`"
+                        :step="passo.numero"
+                        v-for="passo in passos"&gt;
+                    &lt;/v-stepper-content&gt;
+                    &lt;router-view @desabilitaPasso2="desabilitaPasso2"
+                                 @habilitaPasso2="habilitaPasso2"
+                                 @desabilitaPasso3="desabilitaPasso3"
+                                 @habilitaPasso3="habilitaPasso3"
+                    /&gt;
+                &lt;/v-stepper-items&gt;
+            &lt;/v-stepper&gt;
+        &lt;/az-container&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import {actionTypes, mutationTypes} from '@/core/constants'
+    import {mapActions, mapMutations} from 'vuex'
+    import AzHasPermissions from '@azinformatica/loki/src/utils/AzHasPermissions'
+    import BotaoRemover from '@/views/components/botoes/BotaoRemover'
+&nbsp;
+    export default {
+        name: 'IncorporacaoEdicao',
+        components: {BotaoRemover},
+        data() {
+            return {
+                passos: [
+                    {
+                        titulo: 'Dados Gerais',
+                        rotaPadrao: 'EditarIncorporacao',
+                        rotaVisualizacao: 'VisualizarIncorporacao',
+                        rotaEdicao: 'EditarIncorporacao',
+                        desabilitado: false,
+                        numero: 1,
+                    },
+                    {
+                        titulo: 'Itens',
+                        rotaPadrao: 'ItensIncorporacaoListagem',
+                        rotaVisualizacao: 'VisualizarItensIncorporacao',
+                        rotaEdicao: 'ItensIncorporacaoListagem',
+                        desabilitado: true,
+                        numero: 2,
+                    },
+                    {
+                        titulo: 'Documentos',
+                        rotaPadrao: 'IncorporacaoDocumentosEdicao',
+                        rotaVisualizacao: 'VisualizarIncorporacaoDocumentos',
+                        rotaEdicao: 'IncorporacaoDocumentosEdicao',
+                        desabilitado: true,
+                        numero: 3,
+                    }
+                ],
+                passoAtual: {},
+                incorporacaoId: null,
+                rotaOrigem: this.$store.state.incorporacao.rota.origem,
+                valueToolTip: false,
+                situacaoIncorporacao:''
+            }
+        },
+        computed: {
+            verificaPermissaoEdicao() {
+                return AzHasPermissions(this.$store.state.loki.user.authorities, ['Mobiliario.Normal'])
+            }
+        },
+        watch: {
+            $route() {
+<span class="cstat-no" title="statement not covered" >                this.setIncorporacaoId()</span>
+<span class="cstat-no" title="statement not covered" >                this.setPassoAtual(this.$route)</span>
+            },
+        },
+        async created() {
+            await this.buscarSituacaoDaIncorporacao()
+            await this.validarIncorporacaoEmModoElaboracao(this.situacaoIncorporacao)
+        },
+        async mounted() {
+            this.retrairMenu()
+            this.setIncorporacaoId()
+            this.setPassoAtual(this.$route)
+        },
+        methods: {
+            ...mapActions([
+                actionTypes.PATRIMONIO.INCORPORACAO.DELETAR_INCORPORACAO,
+                actionTypes.PATRIMONIO.INCORPORACAO.BUSCAR_SITUACAO_INCORPORACAO
+            ]),
+            ...mapMutations([
+                mutationTypes.PATRIMONIO.INCORPORACAO.SET_SITUACAO_INCORPORACAO
+            ]),
+            contralaAcessoAosPassosEmCadaRota() {
+                if (this.$route.name === 'ItensIncorporacaoListagem' || this.$route.name === 'VisualizarItensIncorporacao') {
+                    this.passos[1].desabilitado = false
+                    this.passos[2].desabilitado = true
+                }
+                if (this.$route.name === 'EditarIncorporacao' || this.$route.name === 'VisualizarIncorporacao') {
+                    this.passos[1].desabilitado = true
+                }
+                if (this.$route.name === 'IncorporacaoDocumentosEdicao' || this.$route.name === 'VisualizarIncorporacaoDocumentos') {
+                    this.passos[0].desabilitado = false
+                    this.passos[1].desabilitado = false
+                    this.passos[2].desabilitado = false
+                }
+            },
+            async buscarSituacaoDaIncorporacao() {
+                this.situacaoIncorporacao = await this.buscarSituacaoIncorporacao(this.$route.params.incorporacaoId)
+                this.setSituacaoIncorporacao(this.situacaoIncorporacao)
+            },
+            async validarIncorporacaoEmModoElaboracao(situacaoIncorporacao) {
+                if (situacaoIncorporacao !== 'EM_ELABORACAO' &amp;&amp; situacaoIncorporacao !== 'ERRO_PROCESSAMENTO') {
+                    this.mostrarNotificacaoErro('Não é possivel editar esta incorporação!')
+                    await this.$router.replace({name: 'IncorporacaoListagem'})
+                }
+            },
+&nbsp;
+            desabilitaPasso3() {
+                this.passos[2].desabilitado = true
+            },
+            expandirMenu() {
+                this.$store.commit(mutationTypes.COMUM.SET_EXPANDIR_MENU)
+            },
+            habilitaPasso3() {
+                this.passos[2].desabilitado = false
+            },
+            desabilitaPasso2() {
+                this.passos[1].desabilitado = true
+            },
+            habilitaPasso2() {
+                this.passos[1].desabilitado = false
+            },
+            retrairMenu() {
+                this.$store.commit(mutationTypes.COMUM.SET_RETRAIR_MENU)
+            },
+            setIncorporacaoId() {
+                this.incorporacaoId = this.$route.params.incorporacaoId
+            },
+            setPassoAtual(route) {
+                const encontrado = this.passos.filter(
+                    passo =&gt;
+                        passo.rotaPadrao === route.name ||
+                        passo.rotaEdicao === route.name ||
+                        passo.rotaVisualizacao === route.name
+                )
+                this.passoAtual = encontrado[0]
+                this.contralaAcessoAosPassosEmCadaRota()
+            },
+            async tratarEventoDeletarIncorporacao() {
+                await this.deletarIncorporacao(this.incorporacaoId)
+                this.mostrarNotificacaoSucessoDefault()
+                await this.$router.replace({name: this.rotaOrigem})
+            },
+            tratarEventoClick(item) {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (item.desabilitado === false) {
+                    if (this.incorporacaoId) {
+                        if (!this.verificaPermissaoEdicao) {
+                            this.$router.replace({name: item.rotaVisualizacao})
+                        } else {
+                            this.$router.replace({
+                                name: item.rotaEdicao,
+                            })
+                        }
+                    } else {
+                        this.$router.replace({
+                            name: this.rotaOrigem,
+                        })
+                    }
+                }
+            }
+        },
+        destroyed() {
+            this.expandirMenu()
+        }
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus"&gt;
+&nbsp;
+.incorporacao-container
+    .v-stepper
+        box-shadow none
+&nbsp;
+        &amp;__content
+            padding 0 15% 0 60%
+&nbsp;
+        &amp;__step__step .v-icon.v-icon
+            font-size .9rem
+&nbsp;
+    .container
+        background-color #fff
+&nbsp;
+    .az-actions-form
+        border-top solid thin rgba(0, 0, 0, .12)
+        padding-top 10px
+        margin-top 0
+&nbsp;
+    &amp;-conteudo
+        min-height 350px
+&nbsp;
+.barra-passo
+    display flex
+    align-items center
+    margin-right 1%
+&nbsp;
+.passo-ativo
+    .v-stepper__step__step
+        background-color #487b9c !important
+        border-color #487b9c !important
+&nbsp;
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../sorter.js"></script>
+</body>
+</html>

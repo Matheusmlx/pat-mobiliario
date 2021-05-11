@@ -1,0 +1,48 @@
+.tabela-termo-responsabilidade {
+    border: 1px solid #ccc;
+}
+
+.tabela-termo-responsabilidade td {
+    font-size: 10px !important;
+    padding: 5px;
+}
+
+.tabela-termo-patrimonios {
+    border: 1px solid #ccc;
+}
+
+.tabela-termo-patrimonios th {
+    background-color: #ebebeb;
+    text-align: left;
+    font-size: 8px;
+    padding: 8px;
+}
+
+.tabela-termo-patrimonios th, .tabela-termo-patrimonios td {
+    font-size: 8px !important;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.footer-assinatura {
+    margin-top: 20%;
+    height: 50px;
+}
+
+.footer-assinatura p {
+    margin-bottom: 25px !important;
+}
+
+.footer-tabela {
+    background-color: #ebebeb;
+    text-align: right;
+    font-size: 8px !important;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.footer-assinatura td {
+    font-size: 10px !important;
+    padding: 5px;
+}
+

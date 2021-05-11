@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/components/modal/incorporacao/adicionaritem/itemincorporacao/edicao/DadosGeraisDoItemModal.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/components/modal/incorporacao/adicionaritem/itemincorporacao/edicao</a> DadosGeraisDoItemModal.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">630x</span>
+<span class="cline-any cline-yes">630x</span>
+<span class="cline-any cline-yes">630x</span>
+<span class="cline-any cline-yes">630x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div&gt;
+        &lt;subTitle :value="dadosDeEntrada"/&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;DadosGeraisDoItemModalFormulario
+            :dadosDeEntrada="dadosDeEntrada"
+            :naturezasDespesa="naturezasDespesa"
+            :estadosConservacao="estadosConservacao"
+            :anoFabricacaoModelo="anoFabricacaoModelo"
+            :naturezaDespesaInativo="naturezaDespesaInativo"
+            :apresentaTooltipImagem="apresentaTooltipImagem"
+            :errorObrigatoriedadeAnexo="errorObrigatoriedadeAnexo"
+            :errorTamanhoExcedido="errorTamanhoExcedido"
+            @editarItem="salvarDadosGerais"
+            @salvarAnexo="tratarEventoSalvarAnexo"
+            @bloquearPasso3="liberarContinuar"
+        /&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&nbsp;
+&lt;script&gt;
+    import DadosGeraisDoItemModalFormulario from './DadosGeraisDoItemModalFormulario'
+    import DadosGeraisDoitemModalSubTitle from './DadosGeraisDoItemModalSubTitle'
+    import {actionTypes, mutationTypes} from '@/core/constants'
+    import {mapActions, mapMutations} from 'vuex'
+    import AzHasPermissions from '@azinformatica/loki/src/utils/AzHasPermissions'
+&nbsp;
+    export default {
+        name: 'DadosGeraisDoItemModal',
+        components: {
+            DadosGeraisDoItemModalFormulario,
+            subTitle: DadosGeraisDoitemModalSubTitle,
+        },
+        data() {
+            return {
+                camposObrigatoriosNaoPreenchidos: true,
+                dialog: false,
+                dadosDeEntrada: {
+                    default: {}
+                },
+                itemIncorporacaoId: null,
+                incorporacaoId: null,
+                naturezasDespesa: [],
+                estadosConservacao: [],
+                anoFabricacaoModelo: [],
+                naturezaDespesaInativo: false,
+                apresentaTooltipImagem: false,
+                errorObrigatoriedadeAnexo: 0,
+                errorTamanhoExcedido: 0,
+            }
+        },
+        async mounted() {
+            this.geraAnoModeloFabricacao()
+            this.setItemIncorporacaoId()
+            this.setIncorporacaoId()
+<span class="missing-if-branch" title="else path not taken" >E</span>            if (!this.verificaPermissaoEdicao()) {
+                await this. etapaDoisVisualizacao()
+            }
+            await this.buscarDadosGeraisItemIncorporacao()
+            await this.buscarNaturezasDespesa()
+            await this.buscarTodosEstadosConservacao()
+            this.trataSeNaturezaDespesaInativo()
+        },
+        methods: {
+            ...mapActions([
+                actionTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.IMAGEM.UPLOAD,
+                actionTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.BUSCAR_ITEM_INCORPORACAO,
+                actionTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.EDITAR_ITEM_INCORPORACAO,
+                actionTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.ESTADO_CONSERVACAO.BUSCAR_ESTADOS_CONSERVACAO
+            ]),
+            ...mapMutations([
+                mutationTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.DESATIVAR_SALVAMENTO_AUTOMATICO,
+                mutationTypes.PATRIMONIO.INCORPORACAO.INCORPORACAO_ITEM.SET_INCORPORACAO_ITEM
+            ]),
+            async salvarDadosGerais(novoItem) {
+                this.desabilitarLoadingGlobal()
+                if(novoItem.naturezaDespesa &amp;&amp; typeof novoItem.naturezaDespesa.id !== 'undefined'){
+                    novoItem.naturezaDespesa = novoItem.naturezaDespesa.id
+                }
+                this.dadosDeEntrada = novoItem
+                this.dadosDeEntrada.idIncorporacao = this.incorporacaoId
+                this.setIncorporacaoItem(this.dadosDeEntrada)
+&nbsp;
+                await this.tratarEventoUploadImagem(novoItem)
+                const {contaContabil, tipoBem, naturezaDespesa} = await this.editarItemIncorporacao(this.dadosDeEntrada)
+                this.dadosDeEntrada.contaContabil = contaContabil
+                this.dadosDeEntrada.tipoBem = tipoBem
+                this.dadosDeEntrada.naturezaDespesa = naturezaDespesa
+                this.trataSeNaturezaDespesaInativo()
+            },
+            async tratarEventoSalvarAnexo(novoItem) {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(novoItem &amp;&amp; novoItem.uriImagem) {
+                    if (!this.extensaoArquivoValida(novoItem.uriImagem)) {
+                        this.mostrarNotificacaoErro(
+                            'Extensão do arquivo inválida. Envie arquivos nos seguintes formatos .jpeg .jpg .png'
+                        )
+                        await this.buscarDadosGeraisItemIncorporacao()
+                    } else {
+                        if (this.validarTamanhoMaximo(novoItem.uriImagem.size)) {
+                            this.errorTamanhoExcedido = 1
+                            this.dadosDeEntrada.uriImagem = await null
+<span class="fstat-no" title="function not covered" >                            setTimeout(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                                this.errorTamanhoExcedido = 0</span>
+<span class="cstat-no" title="statement not covered" >                                this.errorObrigatoriedadeAnexo = 1</span>
+<span class="cstat-no" title="statement not covered" >                                this.$validator._base.validateAll()</span>
+                            }, 3000)
+                        } else {
+                            await this.salvarDadosGerais(novoItem)
+                        }
+                    }
+                }
+                this.apresentaTooltipImagem = false
+            },
+            liberarContinuar(condicao) {
+                this.camposObrigatoriosNaoPreenchidos = condicao
+                this.verificarSituacaoItemIncorporacao(condicao)
+                this.setIncorporacaoItem(this.dadosDeEntrada)
+                this.$emit('verificarContinuar', condicao)
+            },
+            async buscarNaturezasDespesa() {
+                this.desabilitarLoadingGlobal()
+                const resultado = await this.$store.dispatch(
+                    actionTypes.COMUM.BUSCAR_NATUREZAS_DESPESA,
+                    this.dadosDeEntrada.codigo
+                )
+                this.habilitarLoadingGlobal()
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (resultado) {
+                    if (resultado.items.length === 0) {
+                        this.mostrarNotificacaoAviso('Item sem conta contábil, natureza de despesa ou tipo ativos. Escolha outro item')
+                    }
+                    this.naturezasDespesa = resultado.items
+                    this.selecionarNaturezaDespesaCasoTenhaUmaApenas(resultado.items)
+                }
+            },
+            async buscarTodosEstadosConservacao() {
+                const {estadosConservacao} = await this.buscarEstadosConservacao()
+                this.estadosConservacao = estadosConservacao
+            },
+            selecionarNaturezaDespesaCasoTenhaUmaApenas(naturezasDespesa) {
+                if(!this.dadosDeEntrada.naturezaDespesa &amp;&amp; naturezasDespesa.length === 1) {
+                    this.dadosDeEntrada.naturezaDespesa = naturezasDespesa[0].id
+                    this.salvarDadosGerais(this.dadosDeEntrada)
+                }
+            },
+            geraAnoModeloFabricacao() {
+                const anoMinimo = 1980
+                const anoAtual = new Date().getFullYear()
+                for (let ano = anoAtual; ano &gt;= anoMinimo; ano--) {
+                    let anoFabricacao = parseInt(ano)
+                    let anoModeloMaior = parseInt(ano + 1)
+                    this.anoFabricacaoModelo.push(anoFabricacao + '/' + anoModeloMaior)
+                    this.anoFabricacaoModelo.push(anoFabricacao + '/' + anoFabricacao)
+                }
+            },
+            trataSeNaturezaDespesaInativo(){
+                if(this.dadosDeEntrada &amp;&amp; this.dadosDeEntrada.naturezaDespesa &amp;&amp; this.dadosDeEntrada.naturezaDespesa.situacao === 'INATIVO'){
+                    this.dadosDeEntrada.naturezaDespesa.disabled = true
+                    this.naturezaDespesaInativo = true
+                    this.naturezasDespesa.unshift(this.dadosDeEntrada.naturezaDespesa)
+                    this.dadosDeEntrada.naturezaDespesa = this.dadosDeEntrada.naturezaDespesa.id
+                }else{
+                    this.naturezaDespesaInativo = false
+                }
+            },
+            extensaoArquivoValida(arquivo) {
+                const formatosAceitos = [
+                    'image/png',
+                    'image/jpg',
+                    'image/jpeg'
+                ]
+&nbsp;
+                return formatosAceitos.includes(arquivo.type)
+            },
+            validarTamanhoMaximo(tamanhoAnexo) {
+                return tamanhoAnexo &gt;= 15116247
+            },
+            verificarSituacaoItemIncorporacao(estaInvalido){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(estaInvalido) {
+                    this.dadosDeEntrada.situacao = 'EM_ELABORACAO'
+                }
+            },
+            async tratarEventoUploadImagem(itemAnexo) {
+                this.desabilitarLoadingGlobal()
+                if (itemAnexo.uriImagem &amp;&amp; typeof itemAnexo.uriImagem == 'object') {
+                    this.dadosDeEntrada.uriImagem = await this.uploadImagem(itemAnexo)
+                }
+                this.habilitarLoadingGlobal()
+            },
+            setItemIncorporacaoId(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (this.$route.params.itemIncorporacaoId) {
+                    this.itemIncorporacaoId = this.$route.params.itemIncorporacaoId
+                }
+            },
+            setIncorporacaoId(){
+<span class="missing-if-branch" title="else path not taken" >E</span>                if(this.$route.params.incorporacaoId){
+                    this.incorporacaoId = this.$route.params.incorporacaoId
+                }
+            },
+            async buscarDadosGeraisItemIncorporacao() {
+                this.desabilitarLoadingGlobal()
+                const resultado = await this.buscarItemIncorporacao({idItem: this.itemIncorporacaoId, idIncorporacao: this.incorporacaoId})
+                this.habilitarLoadingGlobal()
+                this.dadosDeEntrada = resultado
+                this.dadosDeEntrada.valorTotalAnterior = resultado.valorTotal
+                this.dadosDeEntrada.numeracaoPatrimonial = 'AUTOMATICA'
+                this.setIncorporacaoItem(this.dadosDeEntrada)
+            },
+            etapaDoisVisualizacao(){
+                this.$router.push({
+                    name: 'VisualizacaoDadosGerais',
+                    itemIncorporacaoId: this.itemIncorporacaoId,
+                    incorporacaoId: this.incorporacaoId
+                })
+            },
+            verificaPermissaoEdicao() {
+                return AzHasPermissions(this.$store.state.loki.user.authorities, [
+                    'Mobiliario.Normal',
+                ])
+            },
+        },
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style scoped lang="stylus"&gt;
+    .close__button::before
+        background: transparent
+&nbsp;
+    .acoes
+        height 100%
+        padding 0px 20px 15px
+&nbsp;
+    .styleHeader
+        font-size 17px
+&nbsp;
+    .styleHeader span
+        font-weight bold
+&nbsp;
+    .v-dialog:not(.v-dialog--fullscreen)
+        max-height 100% !important
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../../sorter.js"></script>
+</body>
+</html>

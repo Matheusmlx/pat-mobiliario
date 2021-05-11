@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <td class="col-9 left">
+            <span th:text="${dataHoraUsuario}" class="header-left"></span>
+        </td>
+        <td class="col-1 right">
+            <span class="header-right">Página <span id="pagenumber"></span> de <span id="pagecount"></span></span>
+        </td>
+    </tr>
+</table>
+<div>
+    <div class="col-4 imagem-cabecalho" style="display: flex; justify-items: center; justify-content: center;margin: auto;width:50%;">
+        <img th:src="|data:image/png;base64,${logoRelatorio}|" alt="Logo do cliente" style="display:flex;width:30%;height:114px;margin-left:auto;margin-right:auto"/>
+    </div>
+</div>
+

@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for patrimonio-mobiliario-app/src/views/components/modal/configuracao/concedente/ConcedenteModalFormulario.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../index.html">All files</a> / <a href="index.html">patrimonio-mobiliario-app/src/views/components/modal/configuracao/concedente</a> ConcedenteModalFormulario.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;v-data&gt;
+        &lt;tr&gt;
+            &lt;template v-if="!modoEdicao"&gt;
+                &lt;td&gt;{{ formatarCpfCnpj }}&lt;/td&gt;
+                &lt;td&gt;{{ dadosGerais.nome }}&lt;/td&gt;
+                &lt;td&gt;{{ dadosGerais.situacao | azEnum(situacoesConcedente) }}&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div v-if="(!concedenteEditando)"&gt;
+                        &lt;acoes-icones-tooltip-editar-selecionar
+                            :desabilitado="!podeSelecionar"
+                            @ativarEdicao="ativarModoEdicao"
+                            @selecionar="selecionarConcedente"/&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/template&gt;
+            &lt;template v-if="modoEdicao || estaInserindo"&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;v-text-field
+                        class="input_concedente"
+                        v-model="dadosGerais.cpfCnpj"
+                        name="cpfCnpj"
+                        :error-messages="errors.collect('cpfCnpj')"
+                        v-validate="'required'"
+                        v-mask="[masks.cpf, masks.cnpj]"
+                        placeholder="Informe o CPF/CNPJ"&gt;
+                    &lt;/v-text-field&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                        &lt;v-text-field
+                            class="input_concedente"
+                            v-model="dadosGerais.nome"
+                            name="nome"
+                            counter="100"
+                            maxlength="100"
+                            v-validate="'required|max:100'"
+                            :error-messages="errors.collect('nome')"
+                            placeholder="Informe o concedente"&gt;
+                        &lt;/v-text-field&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;div class="mt-3"&gt;
+                        &lt;v-radio-group
+                            v-model="dadosGerais.situacao"
+                            name="situacao"
+                            :error-messages="errors.collect('situacao')"
+                            class="checkbox_situacao"
+                            v-validate="'required'"
+                            row&gt;
+                            &lt;v-radio label="Ativo" value="ATIVO"/&gt;
+                            &lt;v-radio label="Inativo" value="INATIVO"/&gt;
+                        &lt;/v-radio-group&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td class="v-data-table_selected"&gt;
+                    &lt;acoes-icones-salvar-cancelar @salvar="salvarConcedente" @cancelar="cancelarModoEdicao"/&gt;
+                &lt;/td&gt;
+            &lt;/template&gt;
+        &lt;/tr&gt;
+    &lt;/v-data&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import {mapState} from 'vuex'
+    import _ from 'lodash'
+    import AcoesIconesSalvarCancelar from '@/views/components/acoes/AcoesIconesSalvarCancelar'
+    import AcoesIconesTooltipEditarSelecionar from '@/views/components/acoes/AcoesIconesTooltipEditarSelecionar'
+&nbsp;
+    export default {
+        name: 'ConcedenteModalTabela',
+        props: ['value','concedenteEditando'],
+        components:{AcoesIconesTooltipEditarSelecionar, AcoesIconesSalvarCancelar},
+        data() {
+            return {
+                masks: {
+                    cpf: '###.###.###-##',
+                    cnpj: '##.###.###/####-##'
+                },
+                modoEdicao: false,
+                dadosGerais: this.value
+            }
+        },
+        watch: {
+            'value'(concedentes) {
+<span class="cstat-no" title="statement not covered" >                this.dadosGerais = _.cloneDeep(concedentes)</span>
+            },
+            'concedente.todosConcedentes.filtros.conteudo.value'() {
+<span class="cstat-no" title="statement not covered" >                this.desativarModoEdicao()</span>
+<span class="cstat-no" title="statement not covered" >                this.$emit('habilitaBotaoNovo')</span>
+            },
+            'concedente.todosConcedentes.paginacao': {
+                handler() {
+<span class="cstat-no" title="statement not covered" >                    this.desativarModoEdicao()</span>
+<span class="cstat-no" title="statement not covered" >                    this.$emit('habilitaBotaoNovo')</span>
+                },
+                deep: true
+            }
+        },
+        computed: {
+            ...mapState(['concedente']),
+            estaInserindo() {
+                if (!this.dadosGerais.id) {
+                    this.ativarModoEdicao()
+                }
+                return !this.dadosGerais.id
+            },
+            formatarCpfCnpj() {
+                if (this.dadosGerais.cpfCnpj) {
+                    const cnpjCpf = this.dadosGerais.cpfCnpj.replace(/\D/g, '')
+                    if (cnpjCpf.length === 11) {
+                        return cnpjCpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4')
+                    }
+                    return cnpjCpf.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, '$1.$2.$3/$4-$5')
+                }
+                return ''
+            },
+            podeSelecionar(){
+                return !!(this.value.situacao === 'ATIVO')
+            }
+        },
+        methods: {
+            ativarModoEdicao() {
+                this.modoEdicao = true
+                this.$validator.resume()
+                this.$emit('desabilitaBotaoNovo')
+                this.setaEditando()
+            },
+            setaEditando(){
+                this.$emit('setaEditando',true)
+            },
+            retiraEditando(){
+                this.$emit('setaEditando',false)
+            },
+            desativarModoEdicao() {
+                this.modoEdicao = false
+                this.$validator.pause()
+                this.retiraEditando()
+            },
+            cancelarModoEdicao() {
+                this.desativarModoEdicao()
+                this.$emit('cancelar')
+            },
+            async validarDadosFormulario() {
+                return await this.$validator.validateAll()
+            },
+            removerCaracteresEspeciais() {
+                this.dadosGerais.cpfCnpj = this.dadosGerais.cpfCnpj.replace(/[./-]/g, '')
+            },
+            async salvarConcedente() {
+<span class="missing-if-branch" title="else path not taken" >E</span>                if (await this.validarDadosFormulario()) {
+                    this.cancelarModoEdicao()
+                    this.removerCaracteresEspeciais()
+                    if (this.estaInserindo) {
+                        this.$emit('salvarConcedente', this.dadosGerais)
+                    } else {
+                        this.$emit('editarConcedente', this.dadosGerais)
+                    }
+                }
+            },
+            selecionarConcedente() {
+                this.$emit('selecionarConcedente', this.dadosGerais)
+            }
+        }
+    }
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus"&gt;
+    .input_concedente
+        margin-top 3px
+        padding-top 3px
+&nbsp;
+    .checkbox_situacao
+        i
+            font-size 15px !important
+            margin-left -5px
+&nbsp;
+        label
+            font-size 13px
+            margin-left -5px
+&nbsp;
+        .v-input--selection-controls__ripple
+            border-radius 50%
+            cursor pointer
+            height 22px
+            position absolute
+            -webkit-transition inherit
+            transition inherit
+            width 23px
+            left -11px
+            top -6px
+            margin 7px
+&nbsp;
+    .label_input
+        font-size 15px
+        font-weight bold
+        color #777 !important
+&nbsp;
+    .text__field
+        font-size 14px
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 10 2021 09:18:50 GMT-0300 (Horário Padrão de Brasília)
+</div>
+</div>
+<script src="../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../sorter.js"></script>
+</body>
+</html>

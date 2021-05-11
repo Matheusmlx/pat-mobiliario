@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Termo de Guarda e Responsabilidade de Plaquetas Patrimoniais</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/reserva_termoguarda.css"/>
+</head>
+<body>
+<div class="header" th:include="${templateHeader}"></div>
+
+<div class="titulos">
+    <h1 class="titulo">
+        <strong>Termo de Guarda e Responsabilidade de Plaquetas Patrimoniais</strong>
+    </h1>
+    <p th:text="${relatorio.orgao}"></p>
+</div>
+
+<h3>Dados da Reserva</h3>
+<table class="tabela-termo-responsabilidade" cellpadding="2">
+    <tr>
+        <td><strong>Código: </strong> <span th:text="${relatorio.codigo}"></span></td>
+        <td><strong>N° Termo: </strong> <span th:text="${relatorio.numeroTermo}"></span></td>
+        <td style="border-right: 1px solid #ccc"><strong>Data Criação: </strong> <span th:text="${relatorio.dataCriacao}"></span></td>
+    </tr>
+</table>
+
+<h3>Dados do Intervalo</h3>
+<div style="min-height: 438px">
+    <table class="tabela-termo-intervalos">
+        <tr>
+            <th colspan="3">Quantidade</th>
+            <th colspan="5">Preenchimento</th>
+            <th colspan="2">Intervalo</th>
+        </tr>
+        <tr>
+            <td colspan="3" th:text="${relatorio.quantidade}"></td>
+            <td colspan="5" th:text="${relatorio.preenchimento}"></td>
+            <td colspan="2" th:text="${relatorio.intervalo}"></td>
+        </tr>
+    </table>
+</div>
+<div class="footer-assinatura">
+    <div>
+        <p align="left">Declaro que recebi e conferi o(s) bem (ns) patrimonial (is) especificados, responsabilizando-me pela sua
+            conservação e comprometendo-me a restituí-lo(s) em perfeito estado de conservação assim que me forem
+            solicitados, ressalvada a hipótese de desgaste natural pela sua utilização.</p>
+    </div>
+
+    <table>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Nome/Matrícula</td>
+            <td align="center">Nome/Matrícula</td>
+        </tr>
+        <tr>
+            <td align="center">______________________________</td>
+            <td align="center">______________________________</td>
+        </tr>
+        <tr>
+            <td align="center">Assinatura responsável pelo setor</td>
+            <td align="center">Assinatura responsável pelos bens</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

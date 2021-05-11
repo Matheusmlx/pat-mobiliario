@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "name": "az.patrimonio-mobiliario",
+      "type": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.integracao",
+      "type": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties$Integracao",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.relatorio",
+      "type": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties$Relatorio",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "az.patrimonio-mobiliario.bloquear-valores-divergentes-ao-finalizar",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.codigo-conta-contabil-almoxarifado",
+      "type": "java.lang.String",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.deprecia-em-almoxarifado",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.dia-mensal-depreciacao",
+      "type": "java.lang.String",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.feriados-locais",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.feriados-nacionais",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.limite-registros-processamento-sincrono",
+      "type": "java.lang.Long",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.patrimonio-para-conta-almoxarifado",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.quantidade-digitos-numero-patrimonio",
+      "type": "java.lang.String",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.reserva-patrimonial-global",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.rotulos-personalizados",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    },
+    {
+      "name": "az.patrimonio-mobiliario.url-chat-suporte",
+      "type": "java.lang.String",
+      "sourceType": "br.com.azi.patrimoniomobiliario.configuration.PatrimonioMobiliarioProperties"
+    }
+  ],
+  "hints": []
+}

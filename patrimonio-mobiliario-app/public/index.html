@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Patrimônio Mobiliário</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Patrimônio Intangível">
+    <meta property="og:description" content="Patrimônio Intangível">
+    <meta name="keywords" content="patrimônio, intangível">
+    <meta name="author" content="AZ Informática">
+    <style lang="less">
+        .az-loadingg-page {
+            width: 100%;
+            display: block;
+            align-items: center;
+            position: absolute;
+            left: 40%;
+            align-content: center;
+        }
+
+        .loading-title {
+            width: 20%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 100px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .loader {
+            height: 4px;
+            width: 20%;
+            position: relative;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+
+        .loader:before {
+            display: block;
+            position: absolute;
+            content: "";
+            left: -200px;
+            width: 200px;
+            height: 4px;
+            background-color: #153c5c;
+            animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            from {
+                left: -200px;
+                width: 30%;
+            }
+            50% {
+                width: 30%;
+            }
+            70% {
+                width: 70%;
+            }
+            80% {
+                left: 50%;
+            }
+            95% {
+                left: 120%;
+            }
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    <strong>Desculpe, mas esta aplicação não funciona se o Javascript estiver desabilidado. Para continuar habilite o Javascript.</strong>
+</noscript>
+<div id="app" class="az-loadingg-page">
+    <h1 class="loading-title">Carregando...</h1>
+    <div class="loader"></div>
+</div>
+</body>
+</html>

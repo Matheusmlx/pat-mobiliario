@@ -1,0 +1,382 @@
+[
+    {
+        "key": "az.patrimonio-mobiliario.rotulos-personalizados",
+        "value": {
+            "i18n": {
+                "CONTA_CONTABIL": {
+                    "campos": {
+                        "codigoContabil": {
+                            "nome": "Código Contábil"
+                        },
+                        "contaContabil": {
+                            "nome": "Conta Contábil"
+                        },
+                        "tipoBem": {
+                            "nome": "Tipo do Bem"
+                        },
+                        "tipoConta": {
+                            "nome": "Tipo da Conta"
+                        },
+                        "vidaUtil": {
+                            "nome": "Vida Útil"
+                        },
+                        "residual": {
+                            "nome": "Residual"
+                        }
+                    }
+                },
+                "CONVENIO": {
+                    "campos": {
+                        "numero": {
+                            "nome": "Número"
+                        },
+                        "nome": {
+                            "nome": "Nome"
+                        },
+                        "concedente": {
+                            "nome": "Concedente"
+                        },
+                        "fonteRecurso": {
+                            "nome": "Fonte de Recurso",
+                            "obrigatorio": false
+                        },
+                        "dataVigenciaInicio": {
+                            "nome": "Início Vigência"
+                        },
+                        "dataVigenciaFim": {
+                            "nome": "Fim Vigência"
+                        },
+                        "situacao": {
+                            "nome": "Situação"
+                        }
+                    }
+                },
+                "CONCEDENTE": {
+                    "campos": {
+                        "cpfCnpj": {
+                            "nome": "CPF/CNPJ"
+                        },
+                        "nome": {
+                            "nome": "Concedente"
+                        },
+                        "situacao": {
+                            "nome": "Situação"
+                        }
+                    }
+                },
+                "RECONHECIMENTO": {
+                    "campos": {
+                        "nome": {
+                            "nome": "Nome"
+                        },
+                        "situacao": {
+                            "nome": "Situação"
+                        },
+                        "execucaoOrcamentaria": {
+                            "nome": "Execução Orçamentária"
+                        },
+                        "camposObrigatorios": {
+                            "nome": "Campos obrigatórios"
+                        }
+                    }
+                },
+                "INCORPORACAO_DADOS_GERAIS": {
+                    "campos": {
+                        "reconhecimento": {
+                            "nome": "Reconhecimento",
+                            "tooltip": "De acordo com o MCASP, o reconhecimento define como o bem foi adquirido. Esse campo é equivalente a modalidade de aquisição ou origem do bem."
+                        },
+                        "numProcesso": {
+                            "nome": "Nº Processo",
+                            "obrigatorio": false
+                        },
+                        "fornecedor": {
+                            "nome": "Fornecedor",
+                            "obrigatorio": false
+                        },
+                        "numeroEmpenho": {
+                            "nome": "N° Empenho"
+                        },
+                        "dataEmpenho": {
+                            "nome": "Data Empenho"
+                        },
+                        "valorEmpenho": {
+                            "nome": "Valor Empenho"
+                        },
+                        "dataRecebimento": {
+                            "nome": "Recebimento"
+                        },
+                        "nota": {
+                            "nome": "Nº Nota"
+                        },
+                        "dataNota": {
+                            "nome": "Data Nota"
+                        },
+                        "valorNota": {
+                            "nome": "Valor Nota"
+                        },
+                        "orgao": {
+                            "nome": "Órgão Responsável"
+                        },
+                        "setor": {
+                            "nome": "Setor",
+                            "tooltip": "Este campo contém o equivalente a Unidades Organizacionais e Setores. O campo será ativado somente quando o usuário escolher um órgão."
+                        },
+                        "origem": {
+                            "nome": "Origem"
+                        },
+                        "convenio": {
+                            "nome": "Convênio",
+                            "obrigatorio": false
+                        },
+                        "fundo": {
+                            "nome": "Fundo Especial",
+                            "obrigatorio": false
+                        },
+                        "projeto": {
+                            "nome": "Projeto",
+                            "obrigatorio": false
+                        },
+                        "comodante": {
+                            "nome": "Comodante",
+                            "obrigatorio": false
+                        },
+                        "dataFinalizacao": {
+                            "nome": "Finalizado em"
+                        },
+                        "codigo": {
+                            "nome": "Código"
+                        },
+                        "situacao": {
+                            "nome": "Situação"
+                        },
+                        "numeroNotaLancamentoContabil": {
+                            "nome": "Número da NL",
+                            "obrigatorio": false
+                        },
+                        "dataNotaLancamentoContabil": {
+                            "nome": "Data da NL",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "INCORPORACAO_ITEM_LISTAGEM_PATRMONIO": {
+                    "campos": {
+                        "numero": {
+                            "nome": "Patrimônio"
+                        },
+                        "valorAquisicao": {
+                            "nome": "Valor Un.(R$)"
+                        },
+                        "placa": {
+                            "nome": "Placa",
+                            "obrigatorio": false
+                        },
+                        "renavam": {
+                            "nome": "Renavam",
+                            "obrigatorio": false
+                        },
+                        "licenciamento": {
+                            "nome": "Licenciamento",
+                            "obrigatorio": false
+                        },
+                        "motor": {
+                            "nome": "Motor",
+                            "obrigatorio": false
+                        },
+                        "chassi": {
+                            "nome": "Chassi",
+                            "obrigatorio": false
+                        },
+                        "numeroSerie": {
+                            "nome": "N° Série",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "ITEM_INCORPORACAO": {
+                    "campos": {
+                        "marca": {
+                            "nome": "Marca",
+                            "obrigatorio": false
+                        },
+                        "modelo": {
+                            "nome": "Modelo",
+                            "obrigatorio": false
+                        },
+                        "fabricante": {
+                            "nome": "Fabricante",
+                            "obrigatorio": false
+                        },
+                        "quantidade": {
+                            "nome": "Quantidade"
+                        },
+                        "codigo": {
+                            "nome": "Código"
+                        },
+                        "descricao": {
+                            "nome": "Descrição"
+                        },
+                        "valorTotal":{
+                            "nome": "Valor Total"
+                        },
+                        "numeracaoPatrimonial": {
+                            "nome": "Numeração Patrimonial",
+                            "tooltip": "Escolha o tipo de numeração que você vai utilizar, e os números serão gerados no próximo passo."
+                        },
+                        "naturezaDespesa": {
+                            "nome": "Natureza de Despesa"
+                        },
+                        "contaContabil": {
+                            "nome": "Conta Contábil Classificação",
+                            "tooltip": "Campo para selecionar a conta contábil de classificação onde o patrimônio estará. Porém, enquanto o bem não for distribuído, ele ficará na conta contábil de Estoque Interno."
+                        },
+                        "estadoConservacao": {
+                            "nome": "Estado de Conservação"
+                        },
+                        "tipoBem": {
+                            "nome": "Tipo"
+                        },
+                        "uriImagem": {
+                            "nome": "Imagem",
+                            "obrigatorio": false
+                        },
+                        "anoFabricacaoModelo": {
+                            "nome": "Ano Fabricação/Modelo",
+                            "obrigatorio": false
+                        },
+                        "combustivel": {
+                            "nome": "Combustível",
+                            "obrigatorio": false
+                        },
+                        "categoria": {
+                            "nome": "Categoria",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "INCORPORACAO_ESTORNO": {
+                    "campos": {
+                        "motivo": {
+                            "nome": "Motivo"
+                        },
+                        "dataHora": {
+                            "nome": "Data/Hora"
+                        }
+                    }
+                },
+                "DOCUMENTOS": {
+                    "campos": {
+                        "numero": {
+                            "nome": "Número"
+                        },
+                        "valor": {
+                            "nome": "Valor",
+                            "obrigatorio": false
+                        },
+                        "tipo": {
+                            "nome": "Tipo"
+                        },
+                        "data": {
+                            "nome": "Data",
+                            "obrigatorio": false
+                        },
+                        "uriAnexo": {
+                            "nome": "Anexo",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "FICHA_INDIVIDUAL_PATRIMONIO": {
+                    "campos": {
+                        "contaContabilAtual": {
+                            "nome": "Conta Contábil Atual",
+                            "tooltip": "Caso o patrimônio esteja em alguma movimentação que exija contas temporárias, será informada a conta nesse campo. Caso não esteja, esse campo trará a conta de classificação"
+                        }
+                    }
+                },
+                "MOVIMENTACAO_INTERNA_DADOS_GERAIS":  {
+                    "campos" : {
+                        "setorOrigem": {
+                            "nome": "Setor Origem"
+                        },
+                        "setorDestino": {
+                            "nome": "Setor Destino"
+                        },
+                        "motivoObservacao": {
+                            "nome": "Motivo/Obs.",
+                            "obrigatorio": false
+                        },
+                        "numeroProcesso": {
+                            "nome": "N° Processo",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "MOVIMENTACAO_INTERNA_ITENS":  {
+                    "campos" : {
+                        "descricao": {
+                            "nome": "Descrição"
+                        },
+                        "incorporacao": {
+                            "nome": "Incorporação"
+                        }
+                    }
+                },
+                "MOVIMENTACAO_INTERNA_LISTAGEM":  {
+                    "campos" : {
+                        "codigo": {
+                            "nome": "Código"
+                        },
+                        "tipo": {
+                            "nome": "Tipo"
+                        },
+                        "situacao": {
+                            "nome": "Situação"
+                        }
+                    }
+                },
+                "DISTRIBUICAO_DADOS_GERAIS": {
+                    "campos": {
+                        "responsavel": {
+                            "nome": "Responsável",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "DEFINITIVA_DADOS_GERAIS": {
+                    "campos": {
+                        "responsavel": {
+                            "nome": "Responsável",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "TEMPORARIA_DADOS_GERAIS": {
+                    "campos": {
+                        "responsavel": {
+                            "nome": "Responsável",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "ENTRE_ESTOQUES_DADOS_GERAIS": {
+                    "campos": {
+                        "responsavel": {
+                            "nome": "Responsável",
+                            "obrigatorio": false
+                        }
+                    }
+                },
+                "DEVOLUCAO_ALMOXARIFADO_DADOS_GERAIS": {
+                    "campos": {
+                        "responsavel": {
+                            "nome": "Responsável",
+                            "obrigatorio": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+]
